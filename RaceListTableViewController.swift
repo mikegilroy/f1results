@@ -16,9 +16,17 @@ class RaceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "F1 2015 Races"
+        
         RaceController.getRaces { (racesArray) -> Void in
             if let races = racesArray {
                 self.races = races
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                })
+                
+            } else {
+                print("no races")
             }
         }
         
@@ -37,7 +45,7 @@ class RaceListTableViewController: UITableViewController {
         if let races = races {
             return races.count
         } else {
-            return 1
+            return 0
         }
     }
 
