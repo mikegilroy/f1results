@@ -55,7 +55,6 @@ class RaceController {
                                 
                                 completion(racesArray: racesArray)
                                 
-                                
                             } else {
                                 completion(racesArray: nil)
                                 print("No races array found")

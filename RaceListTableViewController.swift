@@ -16,7 +16,7 @@ class RaceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "F1 2015 Races"
+        self.title = "F1 2015 Race Results"
         
         RaceController.getRaces { (racesArray) -> Void in
             if let races = racesArray {
@@ -99,7 +99,7 @@ class RaceListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -107,6 +107,6 @@ class RaceListTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

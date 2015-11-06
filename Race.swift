@@ -17,6 +17,7 @@ class Race {
     var raceName: String
     var roundNumber: Int
     var circuitName: String
+    var raceResultsArray: [[String: AnyObject]]
 
     init(jsonDictionary: [String: AnyObject]) {
         let roundNumberString = jsonDictionary[roundNumberKey] as! String
@@ -27,9 +28,12 @@ class Race {
         let circuitDictionary = jsonDictionary["Circuit"] as! [String: AnyObject]
         let circuitName = circuitDictionary[circuitNameKey] as! String
         
+        let raceResultsArray = jsonDictionary["Results"] as! [[String: AnyObject]]
+        
         self.raceName = raceName
         self.roundNumber = roundNumber
         self.circuitName = circuitName
+        self.raceResultsArray = raceResultsArray
     }
     
     
