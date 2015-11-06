@@ -39,9 +39,9 @@ class DriverResult {
     var nationality: String
     var status: String
     var gridPosition: String
-    var carNumber: String
+    var carNumber: String?
     var laps: String
-    var finalTime: String?
+    var finalTime: String
     var fastestLapRank: Int?
     var fastestLapNumber: String?
     var fastestLapTime: String?
@@ -65,7 +65,9 @@ class DriverResult {
         
         let firstName = driverDictionary[firstNameKey] as! String
         let lastName = driverDictionary[lastNameKey] as! String
-        let carNumber = driverDictionary[carNumberKey] as! String
+        if let carNumber = driverDictionary[carNumberKey] as? String {
+            self.carNumber = carNumber
+        }
         let driverCode = driverDictionary[driverCodeKey] as! String
         let driverURLString = driverDictionary[driverURLStringKey] as! String
         let nationality = driverDictionary[nationalityKey] as! String
@@ -81,7 +83,7 @@ class DriverResult {
             let finalTime = timeDictionary[finalTimeKey] as! String
             self.finalTime = finalTime
         } else {
-            self.finalTime = nil
+            self.finalTime = "N/A"
         }
         
         // Get data from sub dictionary of: Fastest Lap
@@ -101,9 +103,7 @@ class DriverResult {
         self.firstName = firstName
         self.lastName = lastName
         self.position = position
-        self.carNumber = carNumber
         self.driverCode = driverCode
-        self.carNumber = carNumber
         self.driverURLString = driverURLString
         self.nationality = nationality
         self.dateOfBirth = dateOfBirth
