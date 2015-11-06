@@ -102,10 +102,33 @@ class RaceListTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toRaceResult" {
+            
+            guard let races = races else { return }
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+             
+                let race = races[indexPath.row]
+                let raceResultScene = segue.destinationViewController as! RaceResultsTableViewController
+                
+                let _ = raceResultScene.view
+                
+                raceResultScene.race = race
+                
+                // for each driver result in race results array, initialize DriverResult and add to array
+                var resultsArray: [DriverResult] = []
+                
+                for driverResult in race.raceResultsArray {
+                    resultsArray.append(DriverResult(jsonDictionary: driverResult))
+                }
+                
+                raceResultScene.resultsArray = resultsArray
+                
+            }
+        }
     }
     
 

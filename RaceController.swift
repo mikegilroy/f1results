@@ -33,19 +33,7 @@ class RaceController {
                                 var racesArray: [Race] = []
                                 
                                 for race in racesArrayDicts {
-                                    
-//                                    // get round number
-//                                    let roundNumberString = race["round"] as! String
-//                                    let roundNumber = Int(roundNumberString)!
-//                                    
-//                                    // get race name
-//                                    let raceName = race["raceName"] as! String
-//                                    
-//                                    // get circuit name
-//                                    let circuitDict = race["Circuit"] as! [String: AnyObject]
-//                                    let circuitName = circuitDict["circuitName"] as! String
-                
-                                    
+                                     
                                     // init Race object with name, circuit, round
                                     let raceObject = Race(jsonDictionary: race)
                                     

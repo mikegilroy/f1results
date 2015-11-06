@@ -41,10 +41,10 @@ class DriverResult {
     var gridPosition: String
     var carNumber: String
     var laps: String
-    var finalTime: String
-    var fastestLapRank: Int
-    var fastestLapNumber: String
-    var fastestLapTime: String
+    var finalTime: String?
+    var fastestLapRank: Int?
+    var fastestLapNumber: String?
+    var fastestLapTime: String?
     var driverURLString: String
     var dateOfBirth: String
     var teamName: String
@@ -76,16 +76,27 @@ class DriverResult {
         let teamName = constructorDictionary[teamNameKey] as! String
         
         // Get data from sub dictionary of: Time
-        let timeDictionary = jsonDictionary["Time"] as! [String: AnyObject]
-        let finalTime = timeDictionary[finalTimeKey] as! String
+        let timeDictionary = jsonDictionary["Time"] as? [String: AnyObject]
+        if let timeDictionary = timeDictionary {
+            let finalTime = timeDictionary[finalTimeKey] as! String
+            self.finalTime = finalTime
+        } else {
+            self.finalTime = nil
+        }
         
         // Get data from sub dictionary of: Fastest Lap
-        let fastestLapDictionary = jsonDictionary["FastestLap"] as! [String: AnyObject]
+        if let fastestLapDictionary = jsonDictionary["FastestLap"] as? [String: AnyObject] {
         let fastestLapRankString = fastestLapDictionary[fastestLapRankKey] as! String
         let fastestLapRank = Int(fastestLapRankString)!
         let fastestLapNumber = fastestLapDictionary[fastestLapNumberKey] as! String
         let fastestLapTimeDictionary = fastestLapDictionary["Time"] as! [String: AnyObject]
         let fastestLapTime = fastestLapTimeDictionary[fastestLapTimeKey] as! String
+            
+            self.fastestLapRank = fastestLapRank
+            self.fastestLapNumber = fastestLapNumber
+            self.fastestLapTime = fastestLapTime
+            
+        }
         
         self.firstName = firstName
         self.lastName = lastName
@@ -98,13 +109,10 @@ class DriverResult {
         self.dateOfBirth = dateOfBirth
         self.points = points
         self.teamName = teamName
-        self.finalTime = finalTime
         self.gridPosition = gridPosition
         self.laps = laps
         self.status = status
-        self.fastestLapRank = fastestLapRank
-        self.fastestLapNumber = fastestLapNumber
-        self.fastestLapTime = fastestLapTime
+        
     }
     
 }

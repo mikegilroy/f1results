@@ -18,28 +18,28 @@ class RaceResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
 
+    
+    // MARK: Functions
+    
+    
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return resultsArray.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("driverResultCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let driverResult = resultsArray[indexPath.row]
+        
+        cell.textLabel?.text = driverResult.fullName
+        cell.detailTextLabel?.text = driverResult.points
+        
         return cell
     }
     
