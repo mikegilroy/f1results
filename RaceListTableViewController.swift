@@ -10,16 +10,18 @@ import UIKit
 
 class RaceListTableViewController: UITableViewController {
 
+    var races: [Race]?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        RaceController.getRaces { (racesArray) -> Void in
+            if let races = racesArray {
+                self.races = races
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,18 +34,27 @@ class RaceListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let races = races {
+            return races.count
+        } else {
+            return 1
+        }
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("raceCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        if let races = self.races {
+            
+            let race = races[indexPath.row]
+            cell.textLabel?.text = race.raceName
+            cell.detailTextLabel?.text = race.circuitName
+        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
