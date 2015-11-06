@@ -13,11 +13,16 @@ class RaceResultsTableViewController: UITableViewController {
     // MARK: Properties / Variables
     
     var race: Race?
-    var resultsArray: [DriverResult] = []
+    var resultsArray: [RaceResult] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
     }
 
     
@@ -39,6 +44,14 @@ class RaceResultsTableViewController: UITableViewController {
         
         cell.textLabel?.text = driverResult.fullName
         cell.detailTextLabel?.text = driverResult.points
+        switch driverResult.points {
+            case "25", "18", "15":
+                cell.detailTextLabel?.textColor = UIColor.greenColor()
+            case "0":
+                cell.detailTextLabel?.textColor = UIColor.redColor()
+            default:
+                cell.detailTextLabel?.textColor = UIColor.blackColor()
+        }
         
         return cell
     }

@@ -117,16 +117,8 @@ class RaceListTableViewController: UITableViewController {
                 let _ = raceResultScene.view
                 
                 raceResultScene.race = race
-                
-                // for each driver result in race results array, initialize DriverResult and add to array
-                var resultsArray: [DriverResult] = []
-                
-                for driverResult in race.raceResultsArray {
-                    resultsArray.append(DriverResult(jsonDictionary: driverResult))
-                }
-                
-                raceResultScene.resultsArray = resultsArray
-                
+                raceResultScene.resultsArray = DriverResultController.getDriverResultsArray(race)
+                raceResultScene.title = race.raceName
             }
         }
     }

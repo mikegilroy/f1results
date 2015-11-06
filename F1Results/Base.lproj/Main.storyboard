@@ -52,7 +52,9 @@
                             <outlet property="delegate" destination="aCU-0H-Nxf" id="d4E-Tx-nPh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nCL-g3-rfR"/>
+                    <navigationItem key="navigationItem" id="nCL-g3-rfR">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="vZf-u1-TnE"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOz-1i-L65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

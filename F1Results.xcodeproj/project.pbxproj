@@ -14,10 +14,12 @@
 		10B74E831BED3048009F6F52 /* RaceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E821BED3048009F6F52 /* RaceListTableViewController.swift */; };
 		10B74E851BED305C009F6F52 /* RaceResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */; };
 		10B74E891BED30E7009F6F52 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E881BED30E7009F6F52 /* Race.swift */; };
-		10B74E8C1BED3112009F6F52 /* DriverResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E8B1BED3112009F6F52 /* DriverResult.swift */; };
+		10B74E8C1BED3112009F6F52 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E8B1BED3112009F6F52 /* RaceResult.swift */; };
 		10B74E8E1BED312F009F6F52 /* RaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E8D1BED312F009F6F52 /* RaceController.swift */; };
 		10B74E901BED3139009F6F52 /* DriverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E8F1BED3139009F6F52 /* DriverController.swift */; };
 		10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E921BED3152009F6F52 /* NetworkController.swift */; };
+		10B74E951BED6F09009F6F52 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E941BED6F09009F6F52 /* Driver.swift */; };
+		10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E961BED6F64009F6F52 /* DriverResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +32,12 @@
 		10B74E821BED3048009F6F52 /* RaceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceListTableViewController.swift; sourceTree = "<group>"; };
 		10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceResultsTableViewController.swift; sourceTree = "<group>"; };
 		10B74E881BED30E7009F6F52 /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
-		10B74E8B1BED3112009F6F52 /* DriverResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverResult.swift; sourceTree = "<group>"; };
+		10B74E8B1BED3112009F6F52 /* RaceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceResult.swift; sourceTree = "<group>"; };
 		10B74E8D1BED312F009F6F52 /* RaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceController.swift; sourceTree = "<group>"; };
 		10B74E8F1BED3139009F6F52 /* DriverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverController.swift; sourceTree = "<group>"; };
 		10B74E921BED3152009F6F52 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		10B74E941BED6F09009F6F52 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		10B74E961BED6F64009F6F52 /* DriverResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				10B74E881BED30E7009F6F52 /* Race.swift */,
-				10B74E8B1BED3112009F6F52 /* DriverResult.swift */,
+				10B74E8B1BED3112009F6F52 /* RaceResult.swift */,
+				10B74E941BED6F09009F6F52 /* Driver.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -110,9 +115,10 @@
 		10B74E911BED313D009F6F52 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				10B74E921BED3152009F6F52 /* NetworkController.swift */,
 				10B74E8D1BED312F009F6F52 /* RaceController.swift */,
 				10B74E8F1BED3139009F6F52 /* DriverController.swift */,
-				10B74E921BED3152009F6F52 /* NetworkController.swift */,
+				10B74E961BED6F64009F6F52 /* DriverResultController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -190,11 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */,
-				10B74E8C1BED3112009F6F52 /* DriverResult.swift in Sources */,
+				10B74E8C1BED3112009F6F52 /* RaceResult.swift in Sources */,
+				10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */,
 				10B74E891BED30E7009F6F52 /* Race.swift in Sources */,
 				10B74E901BED3139009F6F52 /* DriverController.swift in Sources */,
 				10B74E8E1BED312F009F6F52 /* RaceController.swift in Sources */,
 				10B74E851BED305C009F6F52 /* RaceResultsTableViewController.swift in Sources */,
+				10B74E951BED6F09009F6F52 /* Driver.swift in Sources */,
 				10B74E831BED3048009F6F52 /* RaceListTableViewController.swift in Sources */,
 				10B74E711BED2F9E009F6F52 /* AppDelegate.swift in Sources */,
 			);

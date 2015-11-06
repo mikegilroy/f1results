@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DriverResult {
+class RaceResult {
     
     let firstNameKey = "givenName"
     let lastNameKey = "familyName"
