@@ -20,6 +20,7 @@
 		10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E921BED3152009F6F52 /* NetworkController.swift */; };
 		10B74E951BED6F09009F6F52 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E941BED6F09009F6F52 /* Driver.swift */; };
 		10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E961BED6F64009F6F52 /* DriverResultController.swift */; };
+		10B74E991BED8181009F6F52 /* DriverProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		10B74E921BED3152009F6F52 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		10B74E941BED6F09009F6F52 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		10B74E961BED6F64009F6F52 /* DriverResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverResultController.swift; sourceTree = "<group>"; };
+		10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				10B74E821BED3048009F6F52 /* RaceListTableViewController.swift */,
 				10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */,
+				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -203,6 +206,7 @@
 				10B74E8E1BED312F009F6F52 /* RaceController.swift in Sources */,
 				10B74E851BED305C009F6F52 /* RaceResultsTableViewController.swift in Sources */,
 				10B74E951BED6F09009F6F52 /* Driver.swift in Sources */,
+				10B74E991BED8181009F6F52 /* DriverProfileTableViewController.swift in Sources */,
 				10B74E831BED3048009F6F52 /* RaceListTableViewController.swift in Sources */,
 				10B74E711BED2F9E009F6F52 /* AppDelegate.swift in Sources */,
 			);

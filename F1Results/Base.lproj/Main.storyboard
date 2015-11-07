@@ -101,7 +101,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="jeK-y1-fdP" kind="show" id="My3-X8-gKP"/>
+                                    <segue destination="jeK-y1-fdP" kind="show" identifier="toDriverProfile" id="My3-X8-gKP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="1525" y="270"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Driver Profile Table View Controller-->
         <scene sceneID="AfT-hj-uRd">
             <objects>
-                <tableViewController id="jeK-y1-fdP" sceneMemberID="viewController">
+                <tableViewController id="jeK-y1-fdP" customClass="DriverProfileTableViewController" customModule="F1Results" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Lx-A9-Quq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,10 +146,10 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lewis Hamilton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-Zg-wVY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lewis Hamilton" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-Zg-wVY">
                                                     <rect key="frame" x="14" y="8" width="282" height="43"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -160,7 +160,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car 44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ1-qO-eN1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. 44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ1-qO-eN1">
                                                     <rect key="frame" x="143" y="92" width="224" height="25"/>
                                                     <animations/>
                                                     <constraints>
@@ -395,7 +395,7 @@
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qOo-Ur-YDy">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recentResultCell" id="qOo-Ur-YDy">
                                                             <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qOo-Ur-YDy" id="24A-xp-bHu">
@@ -427,6 +427,21 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="carNumberLabel" destination="jZ1-qO-eN1" id="AfI-S3-0pU"/>
+                        <outlet property="driverNameLabel" destination="FK5-Zg-wVY" id="7b3-lp-jZe"/>
+                        <outlet property="driverPhotoImageView" destination="KdF-kB-ZTg" id="irn-GA-Jaq"/>
+                        <outlet property="fastestLapTimeLabel" destination="zYd-iB-ZLz" id="SDU-8W-Aac"/>
+                        <outlet property="finalPositionLabel" destination="uHa-62-hUh" id="zab-Nk-VVq"/>
+                        <outlet property="finishPositionLabel" destination="G2z-D1-SgZ" id="Gb2-Ae-eyH"/>
+                        <outlet property="flagImageView" destination="efR-W4-ysC" id="yhk-1T-LR7"/>
+                        <outlet property="gridPositionLabel" destination="hXu-1B-de6" id="Nbw-gM-Der"/>
+                        <outlet property="nationalityLabel" destination="pRn-E3-bla" id="Zw1-WA-Kt7"/>
+                        <outlet property="pointsLabel" destination="Pf4-jC-jHS" id="Njr-WX-6zW"/>
+                        <outlet property="statusLabel" destination="Bi2-xD-pM1" id="f9i-IO-jbM"/>
+                        <outlet property="teamLabel" destination="5Ex-ed-xRi" id="1aA-QJ-cn6"/>
+                        <outlet property="timeLabel" destination="kzz-cf-FbU" id="3UT-CX-0pr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpF-Lu-VAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
