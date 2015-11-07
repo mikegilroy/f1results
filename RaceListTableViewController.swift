@@ -16,9 +16,9 @@ class RaceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "brushedSteel")!)
-        
-        self.title = "F1 2015 Race Results"
+        //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "brushedSteel")!)
+        self.title = "Race Results"
+    
         
         RaceController.getRaces { (racesArray) -> Void in
             if let races = racesArray {
@@ -44,7 +44,7 @@ class RaceListTableViewController: UITableViewController {
     
     func flageImageFromString(raceName: String) -> UIImage {
         let raceName = raceName.lowercaseString
-        if raceName.containsString("Australia") {
+        if raceName.containsString("australia") {
             return UIImage(named: "Australia")!
         } else if raceName.containsString("british") {
             return UIImage(named: "United-Kingdom")!

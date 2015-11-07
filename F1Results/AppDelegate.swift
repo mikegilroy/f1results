@@ -17,13 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
-    
+        
         UINavigationBar.appearance().barTintColor = UIColor.redColor()
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "fibre"), forBarMetrics: .Default)
         UINavigationBar.appearance().tintColor = UIColor.redColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
         UINavigationBar.appearance().barStyle = .Black
+        
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
         
         return true
     }
