@@ -36,7 +36,7 @@ class DriverProfileTableViewController: UITableViewController {
         self.title = self.race!.raceName
         
         self.driverNameLabel.text = raceResult.fullName
-        self.flagImageView.image = UIImage(named: "GB")
+        self.flagImageView.image = imageFromNationality(raceResult.nationality)
         self.driverPhotoImageView.image = imageFromName(raceResult.lastName)
         self.nationalityLabel.text = raceResult.nationality
         if let carNumber = raceResult.carNumber {
@@ -74,7 +74,32 @@ class DriverProfileTableViewController: UITableViewController {
     
     func imageFromNationality(nationality: String) -> UIImage {
         
-        return UIImage(named: "GB")!
+        switch nationality.lowercaseString {
+        case "british":
+            return UIImage(named: "United-Kingdom")!
+        case "german":
+            return UIImage (named: "Germany")!
+        case "australian":
+            return UIImage (named: "Australia")!
+        case "finnish":
+            return UIImage(named: "Finland")!
+        case "spanish":
+            return UIImage(named: "Spain")!
+        case "brazilian":
+            return UIImage(named: "Brazil")!
+        case "russian":
+            return UIImage(named: "Russia")!
+        case "french":
+            return UIImage(named: "France")!
+        case "venezuelan":
+            return UIImage(named: "Venezuela")!
+        case "swedish":
+            return UIImage(named: "Sweden")!
+        case "america":
+            return UIImage(named: "United-States")!
+        default:
+            return UIImage(named: "United-Kingdom")!
+        }
     }
     
     func imageFromName(name: String) -> UIImage {
@@ -104,7 +129,7 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "ROSSI")!
         case "stevens":
             return UIImage(named: "STEVENS")!
-        case "perez":
+        case "peréz":
             return UIImage(named: "PEREZ")!
         case "nasr":
             return UIImage(named: "NASR")!

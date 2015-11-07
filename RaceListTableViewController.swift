@@ -16,6 +16,8 @@ class RaceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.title = "F1 2015 Race Results"
         
         RaceController.getRaces { (racesArray) -> Void in
@@ -23,6 +25,7 @@ class RaceListTableViewController: UITableViewController {
                 self.races = races
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
+                    print(races)
                 })
                 
             } else {
