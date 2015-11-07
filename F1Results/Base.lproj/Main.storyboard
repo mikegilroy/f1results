@@ -19,35 +19,86 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="raceCell" textLabel="0Cy-KY-h3S" detailTextLabel="Nbk-sE-dX5" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="Tc4-rV-x5w">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="raceCell" rowHeight="58" id="Tc4-rV-x5w" customClass="RaceTableViewCell" customModule="F1Results" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tc4-rV-x5w" id="9mA-9e-JMV">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Cy-KY-h3S">
-                                            <rect key="frame" x="15" y="13" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDX-3C-vRo">
+                                            <rect key="frame" x="85" y="8" width="426" height="17.5"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17.5" id="6P9-Fh-2Iq"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nbk-sE-dX5">
-                                            <rect key="frame" x="15" y="32.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l4-2m-CZO">
+                                            <rect key="frame" x="85" y="33" width="426" height="15.5"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15.5" id="6Kd-h8-Ptg"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Australia" translatesAutoresizingMaskIntoConstraints="NO" id="yC9-Qg-eYO">
+                                            <rect key="frame" x="8" y="-1" width="67" height="57.5"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="67" id="w9Q-HO-SYq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjW-7K-3bz">
+                                            <rect key="frame" x="519" y="8" width="65" height="16.5"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65.5" id="3ha-F3-HAM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="21 - 24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2j-eY-JIh">
+                                            <rect key="frame" x="519" y="32" width="65" height="17"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="vOg-dT-CM4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="a2j-eY-JIh" secondAttribute="bottom" constant="0.5" id="2Ov-4p-GoF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7l4-2m-CZO" secondAttribute="bottom" constant="1" id="G6U-Us-phn"/>
+                                        <constraint firstItem="7l4-2m-CZO" firstAttribute="leading" secondItem="yC9-Qg-eYO" secondAttribute="trailing" constant="10" id="NBQ-NY-EOS"/>
+                                        <constraint firstItem="a2j-eY-JIh" firstAttribute="leading" secondItem="7l4-2m-CZO" secondAttribute="trailing" constant="8" id="YAd-7M-mWd"/>
+                                        <constraint firstItem="HDX-3C-vRo" firstAttribute="leading" secondItem="yC9-Qg-eYO" secondAttribute="trailing" constant="10" id="ZfQ-Yg-5TM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OjW-7K-3bz" secondAttribute="trailing" constant="8" id="aOB-tk-xhC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="a2j-eY-JIh" secondAttribute="trailing" constant="8" id="gUX-lJ-MvF"/>
+                                        <constraint firstItem="yC9-Qg-eYO" firstAttribute="top" secondItem="9mA-9e-JMV" secondAttribute="topMargin" constant="-9" id="mhR-Vu-vCO"/>
+                                        <constraint firstItem="HDX-3C-vRo" firstAttribute="top" secondItem="9mA-9e-JMV" secondAttribute="topMargin" id="pR9-6J-qQm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yC9-Qg-eYO" secondAttribute="bottom" constant="-7" id="pWK-Gs-8gy"/>
+                                        <constraint firstItem="yC9-Qg-eYO" firstAttribute="leading" secondItem="9mA-9e-JMV" secondAttribute="leadingMargin" id="q3i-BZ-H65"/>
+                                        <constraint firstItem="OjW-7K-3bz" firstAttribute="top" secondItem="9mA-9e-JMV" secondAttribute="topMargin" id="wP7-F4-O0I"/>
+                                        <constraint firstItem="OjW-7K-3bz" firstAttribute="leading" secondItem="HDX-3C-vRo" secondAttribute="trailing" constant="8" id="zD0-5e-Occ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="raceCircuitLabel" destination="7l4-2m-CZO" id="UDq-YZ-DWD"/>
+                                    <outlet property="raceDaysLabel" destination="a2j-eY-JIh" id="ncM-4R-CqZ"/>
+                                    <outlet property="raceImageView" destination="yC9-Qg-eYO" id="3Xo-l9-v32"/>
+                                    <outlet property="raceMonthLabel" destination="OjW-7K-3bz" id="SRV-jB-EDK"/>
+                                    <outlet property="raceNameLabel" destination="HDX-3C-vRo" id="6Sm-Cg-0qs"/>
                                     <segue destination="P2z-RY-CUJ" kind="show" identifier="toRaceResult" id="OdN-fn-LWe"/>
                                 </connections>
                             </tableViewCell>
@@ -446,6 +497,7 @@
                         <outlet property="gridPositionLabel" destination="hXu-1B-de6" id="Nbw-gM-Der"/>
                         <outlet property="nationalityLabel" destination="pRn-E3-bla" id="Zw1-WA-Kt7"/>
                         <outlet property="pointsLabel" destination="Pf4-jC-jHS" id="Njr-WX-6zW"/>
+                        <outlet property="recentResultsTableView" destination="q60-Mv-XVj" id="d95-Em-MWX"/>
                         <outlet property="statusLabel" destination="Bi2-xD-pM1" id="f9i-IO-jbM"/>
                         <outlet property="teamLabel" destination="5Ex-ed-xRi" id="1aA-QJ-cn6"/>
                         <outlet property="timeLabel" destination="kzz-cf-FbU" id="3UT-CX-0pr"/>
@@ -572,6 +624,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Australia" width="64" height="64"/>
         <image name="GB" width="64" height="64"/>
         <image name="HAM" width="1024" height="1024"/>
         <image name="flagIcon" width="25" height="25"/>

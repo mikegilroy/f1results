@@ -42,7 +42,7 @@ class RaceListTableViewController: UITableViewController {
 
     
     
-    func flageImageFromString(raceName: String) -> UIImage {
+    static func flageImageFromString(raceName: String) -> UIImage {
         let raceName = raceName.lowercaseString
         if raceName.containsString("australia") {
             return UIImage(named: "Australia")!
@@ -87,7 +87,6 @@ class RaceListTableViewController: UITableViewController {
 
     
     
-    
     // MARK: - Table view data source
 
 
@@ -102,16 +101,14 @@ class RaceListTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("raceCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("raceCell", forIndexPath: indexPath) as! RaceTableViewCell
 
         if let races = self.races {
             
             let race = races[indexPath.row]
-            cell.imageView?.image = flageImageFromString(race.raceName)
-            cell.textLabel?.text = race.raceName
-            cell.detailTextLabel?.text = race.circuitName
+            cell.updateCellWithRace(race, indexPath: indexPath)
         }
-
+        
         return cell
     }
     

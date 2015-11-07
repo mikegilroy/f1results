@@ -25,6 +25,7 @@ class DriverProfileTableViewController: UITableViewController {
     @IBOutlet weak var gridPositionLabel: UILabel!
     @IBOutlet weak var finalPositionLabel: UILabel!
     @IBOutlet weak var fastestLapTimeLabel: UILabel!
+    @IBOutlet weak var recentResultsTableView: UITableView!
     
     var raceResult: RaceResult?
     var race: Race?
@@ -171,15 +172,34 @@ class DriverProfileTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch tableView {
+//        case recentResultsTableView:
+//            return "Recent Race Results"
+//        default:
+//            return ""
+//        }
+//    }
+//    
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        switch tableView {
+//        case recentResultsTableView:
+//            return 1
+//        default:
+//            return 0
+//        }
+//    }
+//    
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        switch tableView {
+//        case recentResultsTableView:
+//            return 5
+//        default:
+//            return 0
+//        }
+//    }
+//    
+    
 
     /*
     // Override to support conditional editing of the table view.

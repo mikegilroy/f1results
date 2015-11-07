@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100338531BEEB542008CC50D /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100338521BEEB542008CC50D /* RaceTableViewCell.swift */; };
 		10B74E711BED2F9E009F6F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E701BED2F9E009F6F52 /* AppDelegate.swift */; };
 		10B74E761BED2F9E009F6F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B74E741BED2F9E009F6F52 /* Main.storyboard */; };
 		10B74E781BED2F9E009F6F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B74E771BED2F9E009F6F52 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100338521BEEB542008CC50D /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		10B74E6D1BED2F9E009F6F52 /* F1Results.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1Results.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B74E701BED2F9E009F6F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B74E751BED2F9E009F6F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100338541BEEB548008CC50D /* Race Results View */ = {
+			isa = PBXGroup;
+			children = (
+				10B74E821BED3048009F6F52 /* RaceListTableViewController.swift */,
+				100338521BEEB542008CC50D /* RaceTableViewCell.swift */,
+			);
+			name = "Race Results View";
+			sourceTree = "<group>";
+		};
 		10B74E641BED2F9E009F6F52 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +97,7 @@
 		10B74E861BED3064009F6F52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10B74E821BED3048009F6F52 /* RaceListTableViewController.swift */,
+				100338541BEEB548008CC50D /* Race Results View */,
 				10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */,
 				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
 			);
@@ -198,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100338531BEEB542008CC50D /* RaceTableViewCell.swift in Sources */,
 				10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */,
 				10B74E8C1BED3112009F6F52 /* RaceResult.swift in Sources */,
 				10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */,
@@ -356,6 +368,7 @@
 				10B74E811BED2F9E009F6F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
