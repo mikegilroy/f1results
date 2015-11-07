@@ -97,6 +97,12 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "Sweden")!
         case "america":
             return UIImage(named: "United-States")!
+        case "mexican":
+            return UIImage(named: "Mexico")!
+        case "dutch":
+            return UIImage(named: "Netherlands")!
+        case "danish":
+            return UIImage(named: "Denmark")!
         default:
             return UIImage(named: "United-Kingdom")!
         }
@@ -111,7 +117,7 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "BUTTON")!
         case "sainz":
             return UIImage(named: "SAINZ")!
-        case "hulkenberg":
+        case "hülkenberg":
             return UIImage(named: "HULK")!
         case "alonso":
             return UIImage(named: "ALONSO")!
@@ -129,13 +135,13 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "ROSSI")!
         case "stevens":
             return UIImage(named: "STEVENS")!
-        case "peréz":
+        case "pérez":
             return UIImage(named: "PEREZ")!
         case "nasr":
             return UIImage(named: "NASR")!
         case "mehri":
             return UIImage(named: "MEHRI")!
-        case "maldanado":
+        case "maldonado":
             return UIImage(named: "MALD")!
         case "kvyat":
             return UIImage(named: "KVYAT")!
@@ -147,6 +153,8 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "ERICSSON")!
         case "bottas":
             return UIImage(named: "BOTTAS")!
+        case "magnussen":
+            return UIImage(named: "KEVIN")!
         default:
             return UIImage(named: "HAM")!
         }
