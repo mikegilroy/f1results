@@ -12,7 +12,7 @@ class NetworkController {
     
     static let sharedInstance = NetworkController()
     
-    static let baseURL = "http://ergast.com/api/f1/current/results.json?limit=10000.json"
+    static let baseURL = "http://ergast.com/api/f1/current/results.json?limit=600"
     
     
     static func searchURL() -> NSURL {

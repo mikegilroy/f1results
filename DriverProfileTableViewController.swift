@@ -33,7 +33,7 @@ class DriverProfileTableViewController: UITableViewController {
     
     func updateWithRaceResult(raceResult: RaceResult) {
         
-        self.title = self.race!.raceName
+        self.title = self.raceResult?.fullName
         
         self.driverNameLabel.text = raceResult.fullName
         self.flagImageView.image = imageFromNationality(raceResult.nationality)
@@ -155,6 +155,7 @@ class DriverProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
     }
     
     

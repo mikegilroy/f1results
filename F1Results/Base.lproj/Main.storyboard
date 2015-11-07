@@ -110,6 +110,9 @@
                             <outlet property="delegate" destination="P2z-RY-CUJ" id="lt4-nq-BPq"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="5Wh-br-OdR">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LDR-ak-Zju"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xS-e5-Q1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,6 +429,9 @@
                             <outlet property="delegate" destination="jeK-y1-fdP" id="l2j-lg-Ltz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Hwm-Nh-Se7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lnb-fs-3B8"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="carNumberLabel" destination="jZ1-qO-eN1" id="AfI-S3-0pU"/>

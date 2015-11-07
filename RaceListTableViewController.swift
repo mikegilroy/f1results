@@ -16,6 +16,9 @@ class RaceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Status bar white font
+        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController!.navigationBar.tintColor = UIColor.redColor()
         
         
         self.title = "F1 2015 Race Results"
