@@ -38,20 +38,11 @@ class RaceResultsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("driverResultCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("driverResultCell", forIndexPath: indexPath) as! RaceResultTableViewCell
 
         let driverResult = resultsArray[indexPath.row]
         
-        cell.textLabel?.text = driverResult.fullName
-        cell.detailTextLabel?.text = driverResult.points
-        switch driverResult.points {
-            case "25", "18", "15":
-                cell.detailTextLabel?.textColor = UIColor(red: 244/255, green: 208/255, blue: 63/255, alpha: 1.0)
-            case "0":
-                cell.detailTextLabel?.textColor = UIColor.redColor()
-            default:
-                cell.detailTextLabel?.textColor = UIColor.blackColor()
-        }
+        cell.updateCellWithRaceResult(driverResult)
         
         return cell
     }

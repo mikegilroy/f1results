@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100250FC1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */; };
 		100338531BEEB542008CC50D /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100338521BEEB542008CC50D /* RaceTableViewCell.swift */; };
 		10B74E711BED2F9E009F6F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74E701BED2F9E009F6F52 /* AppDelegate.swift */; };
 		10B74E761BED2F9E009F6F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B74E741BED2F9E009F6F52 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaceResultTableViewCell.swift; path = F1Results/RaceResultTableViewCell.swift; sourceTree = "<group>"; };
 		100338521BEEB542008CC50D /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		10B74E6D1BED2F9E009F6F52 /* F1Results.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1Results.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B74E701BED2F9E009F6F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100250FD1BEFEE89006FF3C8 /* Driver Results View */ = {
+			isa = PBXGroup;
+			children = (
+				10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */,
+				100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */,
+			);
+			name = "Driver Results View";
+			sourceTree = "<group>";
+		};
 		100338541BEEB548008CC50D /* Race Results View */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				100338541BEEB548008CC50D /* Race Results View */,
-				10B74E841BED305C009F6F52 /* RaceResultsTableViewController.swift */,
+				100250FD1BEFEE89006FF3C8 /* Driver Results View */,
 				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
 			);
 			name = Views;
@@ -213,6 +224,7 @@
 				10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */,
 				10B74E8C1BED3112009F6F52 /* RaceResult.swift in Sources */,
 				10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */,
+				100250FC1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift in Sources */,
 				10B74E891BED30E7009F6F52 /* Race.swift in Sources */,
 				10B74E901BED3139009F6F52 /* DriverController.swift in Sources */,
 				10B74E8E1BED312F009F6F52 /* RaceController.swift in Sources */,

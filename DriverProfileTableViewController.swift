@@ -43,7 +43,7 @@ class DriverProfileTableViewController: UITableViewController {
         if let carNumber = raceResult.carNumber {
             self.carNumberLabel.text = "No. \(carNumber)"
         }
-        self.teamLabel.text = raceResult.teamName
+        self.teamLabel.text = raceResult.teamName.uppercaseString
         
         if raceResult.status == "Finished" {
             switch raceResult.position {
@@ -173,32 +173,29 @@ class DriverProfileTableViewController: UITableViewController {
     // MARK: - Table view data source
 
 //    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch tableView {
-//        case recentResultsTableView:
+//        if tableView == recentResultsTableView {
 //            return "Recent Race Results"
-//        default:
-//            return ""
 //        }
+//        return ""
 //    }
 //    
 //    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        switch tableView {
-//        case recentResultsTableView:
+//        
+//        if tableView == recentResultsTableView {
 //            return 1
-//        default:
+//        } else {
 //            return 0
 //        }
 //    }
 //    
 //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        switch tableView {
-//        case recentResultsTableView:
+//        if tableView == recentResultsTableView {
 //            return 5
-//        default:
+//        } else {
 //            return 0
 //        }
 //    }
-//    
+    
     
 
     /*
