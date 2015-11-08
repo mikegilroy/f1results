@@ -19,6 +19,8 @@ class RaceListTableViewController: UITableViewController {
         //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "brushedSteel")!)
         loadRaces()
         
+        self.prefersStatusBarHidden()
+        
         
         
     }

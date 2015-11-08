@@ -41,7 +41,7 @@ class DriverProfileTableViewController: UITableViewController {
         self.driverPhotoImageView.image = imageFromName(raceResult.lastName)
         self.nationalityLabel.text = raceResult.nationality
         if let carNumber = raceResult.carNumber {
-            self.carNumberLabel.text = "No. \(carNumber)"
+            self.carNumberLabel.text = "#\(carNumber)"
         }
         self.teamLabel.text = raceResult.teamName.uppercaseString
         
