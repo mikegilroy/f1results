@@ -17,14 +17,24 @@ class RaceListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "brushedSteel")!)
-        self.title = "Race Results"
-    
+        loadRaces()
         
+        
+        
+    }
+
+    @IBAction func userRefreshedTable(sender: AnyObject) {
+        loadRaces()
+    }
+
+    
+    func loadRaces() {
         RaceController.getRaces { (racesArray) -> Void in
             if let races = racesArray {
                 self.races = races
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
                     print(races)
                 })
                 
@@ -32,14 +42,8 @@ class RaceListTableViewController: UITableViewController {
                 print("no races")
             }
         }
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     
     
     static func flageImageFromString(raceName: String) -> UIImage {

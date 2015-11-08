@@ -110,6 +110,14 @@
                     <navigationItem key="navigationItem" id="nCL-g3-rfR">
                         <barButtonItem key="backBarButtonItem" title="Back" id="vZf-u1-TnE"/>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="clv-Kg-FJR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <attributedString key="attributedTitle"/>
+                        <connections>
+                            <action selector="userRefreshedTable:" destination="aCU-0H-Nxf" eventType="valueChanged" id="9Ht-oN-CN7"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOz-1i-L65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
