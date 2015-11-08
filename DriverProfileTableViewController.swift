@@ -48,13 +48,13 @@ class DriverProfileTableViewController: UITableViewController {
         if raceResult.status == "Finished" {
             switch raceResult.position {
             case 1, 21:
-                self.finishPositionLabel.text = "Finished: \(raceResult.position)st"
+                self.finishPositionLabel.text = "\(raceResult.position)st"
             case 2, 22:
-                self.finishPositionLabel.text = "Finished: \(raceResult.position)nd"
+                self.finishPositionLabel.text = "\(raceResult.position)nd"
             case 3, 23:
-                self.finishPositionLabel.text = "Finished: \(raceResult.position)rd"
+                self.finishPositionLabel.text = "\(raceResult.position)rd"
             default:
-                self.finishPositionLabel.text = "Finished: \(raceResult.position)th"
+                self.finishPositionLabel.text = "\(raceResult.position)th"
             }
         } else {
             self.finishPositionLabel.text = "DNF"
@@ -140,7 +140,7 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "PEREZ")!
         case "nasr":
             return UIImage(named: "NASR")!
-        case "mehri":
+        case "merhi":
             return UIImage(named: "MEHRI")!
         case "maldonado":
             return UIImage(named: "MALD")!
