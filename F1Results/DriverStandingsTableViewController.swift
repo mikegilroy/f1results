@@ -60,6 +60,10 @@ class DriverStandingsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 54
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
