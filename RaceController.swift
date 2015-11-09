@@ -13,9 +13,13 @@ class RaceController {
     
     var races: [Race] = []
     
+    let racesURL = "http://ergast.com/api/f1/current/results.json?limit=600"
+    let driverStandingsURL = "http://ergast.com/api/f1/current/driverStandings.json"
+
+    
     static func getRaces(completion: (racesArray: [Race]?) -> Void) {
         
-        let racesUrl = NetworkController.searchURL()
+        let racesUrl = NSURL(string: "http://ergast.com/api/f1/current/results.json?limit=600")!
         
         NetworkController.dataAtURL(racesUrl) { (data) -> Void in
             
