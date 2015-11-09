@@ -10,14 +10,26 @@ import UIKit
 
 class DriverStandingsTableViewController: UITableViewController {
 
+    var driverStandingsArray : [DriverStanding] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        DriverStandingsController.getDriverStandings { (driverStandingsArray) -> Void in
+            if let driverStandingsArray = driverStandingsArray {
+                self.driverStandingsArray = driverStandingsArray
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                    print(driverStandingsArray)
+                })
+                
+            } else {
+                print("no driver standings")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,12 +41,16 @@ class DriverStandingsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.driverStandingsArray.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("driverStandingCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("driverStandingCell", forIndexPath: indexPath) as! DriverStandingsTableViewCell
+        
+        let driverStanding = driverStandingsArray[indexPath.row]
+        
+        cell.updateCellFromDriverStanding(driverStanding)
 
         return cell
     }

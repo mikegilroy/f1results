@@ -673,7 +673,7 @@
             </objects>
             <point key="canvasLocation" x="143" y="270"/>
         </scene>
-        <!--Driver Standings Table View Controller-->
+        <!--Drivers-->
         <scene sceneID="7CT-8z-XwK">
             <objects>
                 <tableViewController id="XDz-0p-kiV" customClass="DriverStandingsTableViewController" customModule="F1Results" customModuleProvider="target" sceneMemberID="viewController">
@@ -684,7 +684,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="driverStandingCell" rowHeight="54" id="Hw5-Y3-Jsf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="driverStandingCell" rowHeight="54" id="Hw5-Y3-Jsf" customClass="DriverStandingsTableViewCell" customModule="F1Results" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hw5-Y3-Jsf" id="NgZ-fV-GPi">
@@ -724,7 +724,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-L6-lBw">
                                             <rect key="frame" x="221" y="8" width="205" height="38"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCEDES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-Cz-qw1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCEDES" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-Cz-qw1">
                                                     <rect key="frame" x="0.0" y="0.0" width="145" height="38"/>
                                                     <animations/>
                                                     <constraints>
@@ -797,6 +797,13 @@
                                 <animations/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="firstNameLabel" destination="fwP-5j-drx" id="j8o-Ar-b4K"/>
+                                    <outlet property="lastNameLabel" destination="epS-cc-OQe" id="t14-AP-l62"/>
+                                    <outlet property="nationalityImageView" destination="MDy-9o-AGA" id="jgD-d7-RE2"/>
+                                    <outlet property="pointsLabel" destination="vBF-eD-7FF" id="K2y-wk-UZl"/>
+                                    <outlet property="positionLabel" destination="WoK-9p-2dO" id="hXP-Kf-Frh"/>
+                                    <outlet property="teamIconImageView" destination="IJD-PD-L9W" id="g4X-7V-7AP"/>
+                                    <outlet property="teamNameLabel" destination="YkP-Cz-qw1" id="wSb-1z-xhf"/>
                                     <segue destination="jeK-y1-fdP" kind="show" id="RGR-MG-Q17"/>
                                 </connections>
                             </tableViewCell>
@@ -806,7 +813,7 @@
                             <outlet property="delegate" destination="XDz-0p-kiV" id="gyD-rI-GAl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zts-hO-D7q">
+                    <navigationItem key="navigationItem" title="Drivers" id="zts-hO-D7q">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kca-hh-i20"/>
                     </navigationItem>
                 </tableViewController>

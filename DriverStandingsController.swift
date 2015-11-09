@@ -28,32 +28,38 @@ class DriverStandingsController {
                     
                     if let MRDataDictionary = jsonData["MRData"] as? [String: AnyObject] {
                         
-                        if let standingsTableArray = MRDataDictionary["StandingsLists"] as? [[String: AnyObject]] {
+                        if let standingsTableDictionary = MRDataDictionary["StandingsTable"] as? [String: AnyObject] {
                             
-                            let standingsDictionary = standingsTableArray[0] 
+                            if let standingsTableArray = standingsTableDictionary["StandingsLists"] as? [[String: AnyObject]] {
+                                
+                                let standingsDictionary = standingsTableArray[0]
                                 
                                 if let driverStandingsArray = standingsDictionary["DriverStandings"] as? [[String: AnyObject]] {
-                                
-                                var standingsArray: [DriverStanding] = []
-                                
-                                for driver in driverStandingsArray {
                                     
-                                    // init Race object with name, circuit, round
-                                    let driverStandingObject = DriverStanding(jsonDictionary: driver)
+                                    var standingsArray: [DriverStanding] = []
                                     
-                                    // append race to racesArray
-                                    standingsArray.append(driverStandingObject)
-                                }
-                                
-                                completion(driverStandingsArray: standingsArray)
+                                    for driver in driverStandingsArray {
+                                        
+                                        // init Race object with name, circuit, round
+                                        let driverStandingObject = DriverStanding(jsonDictionary: driver)
+                                        
+                                        // append race to racesArray
+                                        standingsArray.append(driverStandingObject)
+                                    }
+                                    
+                                    completion(driverStandingsArray: standingsArray)
                                     
                                 } else {
                                     completion(driverStandingsArray: nil)
                                     print("No Driver Standings array")
                                 }
                                 
+                            } else {
+                                print("No raceTable found")
+                                completion(driverStandingsArray: nil)
+                            }
                         } else {
-                            print("No raceTable found")
+                            print("No Standings table")
                             completion(driverStandingsArray: nil)
                         }
                     } else {

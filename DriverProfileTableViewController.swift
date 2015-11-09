@@ -34,7 +34,7 @@ class DriverProfileTableViewController: UITableViewController {
     
     func updateWithRaceResult(raceResult: RaceResult) {
         
-        self.title = self.raceResult?.fullName
+        self.title = self.race?.raceName
         
         self.driverNameLabel.text = raceResult.fullName
         self.flagImageView.image = imageFromNationality(raceResult.nationality)
