@@ -234,7 +234,7 @@ class DriverProfileTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         layoutViewsBasedOnMode(self.viewMode)
     }
     
