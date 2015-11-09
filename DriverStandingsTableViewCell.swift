@@ -86,7 +86,7 @@ class DriverStandingsTableViewCell: UITableViewCell {
             return UIImage(named: "Venezuela")!
         case "swedish":
             return UIImage(named: "Sweden")!
-        case "america":
+        case "american":
             return UIImage(named: "United-States")!
         case "mexican":
             return UIImage(named: "Mexico")!

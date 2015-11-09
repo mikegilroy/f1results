@@ -30,6 +30,8 @@ class DriverProfileTableViewController: UITableViewController {
     var raceResult: RaceResult?
     var race: Race?
     
+    var driverStanding: DriverStanding?
+    
     
     
     func updateWithRaceResult(raceResult: RaceResult) {
@@ -72,6 +74,35 @@ class DriverProfileTableViewController: UITableViewController {
         
     }
     
+    func updateWithDriverStanding(standing: DriverStanding) {
+        
+        self.title = self.driverStanding?.fullName
+        
+        self.driverNameLabel.text = standing.fullName
+        self.flagImageView.image = imageFromNationality(standing.nationality)
+        self.driverPhotoImageView.image = imageFromName(standing.lastName)
+        self.nationalityLabel.text = standing.nationality
+        if let carNumber = standing.carNumber {
+            self.carNumberLabel.text = "#\(carNumber)"
+        }
+        self.teamLabel.text = standing.teamName.uppercaseString
+
+        switch standing.position {
+            case 1, 21:
+                self.finishPositionLabel.text = "\(standing.position)st"
+            case 2, 22:
+                self.finishPositionLabel.text = "\(standing.position)nd"
+            case 3, 23:
+                self.finishPositionLabel.text = "\(standing.position)rd"
+            default:
+                self.finishPositionLabel.text = "\(standing.position)th"
+            }
+        
+        self.pointsLabel.text = "\(standing.points) pts"
+                
+        
+    }
+    
     
     func imageFromNationality(nationality: String) -> UIImage {
         
@@ -96,7 +127,7 @@ class DriverProfileTableViewController: UITableViewController {
             return UIImage(named: "Venezuela")!
         case "swedish":
             return UIImage(named: "Sweden")!
-        case "america":
+        case "american":
             return UIImage(named: "United-States")!
         case "mexican":
             return UIImage(named: "Mexico")!

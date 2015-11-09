@@ -804,7 +804,7 @@
                                     <outlet property="positionLabel" destination="WoK-9p-2dO" id="hXP-Kf-Frh"/>
                                     <outlet property="teamIconImageView" destination="IJD-PD-L9W" id="g4X-7V-7AP"/>
                                     <outlet property="teamNameLabel" destination="YkP-Cz-qw1" id="wSb-1z-xhf"/>
-                                    <segue destination="jeK-y1-fdP" kind="show" id="RGR-MG-Q17"/>
+                                    <segue destination="jeK-y1-fdP" kind="show" identifier="toDriverProfile" id="RGR-MG-Q17"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -816,6 +816,13 @@
                     <navigationItem key="navigationItem" title="Drivers" id="zts-hO-D7q">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kca-hh-i20"/>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="OTr-tE-mMJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <connections>
+                            <action selector="userRefreshedResults:" destination="XDz-0p-kiV" eventType="valueChanged" id="dFj-Qn-4HM"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZr-S1-mrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

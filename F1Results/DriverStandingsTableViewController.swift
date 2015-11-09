@@ -14,9 +14,10 @@ class DriverStandingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
+        loadDriverStandings()
+    }
+    
+    func loadDriverStandings() {
         DriverStandingsController.getDriverStandings { (driverStandingsArray) -> Void in
             if let driverStandingsArray = driverStandingsArray {
                 self.driverStandingsArray = driverStandingsArray
@@ -32,6 +33,10 @@ class DriverStandingsTableViewController: UITableViewController {
         }
     }
 
+    @IBAction func userRefreshedResults(sender: AnyObject) {
+        loadDriverStandings()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,14 +96,25 @@ class DriverStandingsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "toDriverProfile" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let driverStanding = driverStandingsArray[indexPath.row]
 
+                let driverProfileScene = segue.destinationViewController as! DriverProfileTableViewController
+                
+                _ = driverProfileScene.view
+                
+                driverProfileScene.driverStanding = driverStanding
+                driverProfileScene.updateWithDriverStanding(driverStanding)
+            }
+        }
+    }
+    
 }
