@@ -27,12 +27,50 @@ class DriverProfileTableViewController: UITableViewController {
     @IBOutlet weak var fastestLapTimeLabel: UILabel!
     @IBOutlet weak var recentResultsTableView: UITableView!
     
+    @IBOutlet weak var pointsTitleLabel: UILabel!
+    @IBOutlet weak var statusWinsTitleLabel: UILabel!
+    
+    @IBOutlet weak var statsTableViewCell: UITableViewCell!
+    
     var raceResult: RaceResult?
     var race: Race?
     
     var driverStanding: DriverStanding?
     
+    var viewMode: ViewMode = .driverStanding
     
+    enum ViewMode {
+        case driverStanding
+        case raceResult
+    }
+    
+    func layoutViewsBasedOnMode(mode: ViewMode) {
+        switch self.viewMode {
+        case .driverStanding:
+            self.statusWinsTitleLabel.text = "WINS:"
+        case .raceResult:
+            self.statusWinsTitleLabel.text = "STATUS:"
+        }
+    }
+    
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 192
+        case 1:
+            if self.viewMode == .driverStanding {
+                return 80
+                
+            } else {
+                return 225.5
+            }
+        case 2:
+            return 333
+        default:
+           return 333
+        }
+    }
     
     func updateWithRaceResult(raceResult: RaceResult) {
         
@@ -99,7 +137,7 @@ class DriverProfileTableViewController: UITableViewController {
             }
         
         self.pointsLabel.text = "\(standing.points) pts"
-                
+        self.statusLabel.text = "\(standing.wins)"
         
     }
     
@@ -194,8 +232,10 @@ class DriverProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        layoutViewsBasedOnMode(self.viewMode)
     }
     
     

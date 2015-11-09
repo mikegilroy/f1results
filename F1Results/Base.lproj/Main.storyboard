@@ -620,8 +620,11 @@
                         <outlet property="gridPositionLabel" destination="hXu-1B-de6" id="Nbw-gM-Der"/>
                         <outlet property="nationalityLabel" destination="pRn-E3-bla" id="Zw1-WA-Kt7"/>
                         <outlet property="pointsLabel" destination="Pf4-jC-jHS" id="Njr-WX-6zW"/>
+                        <outlet property="pointsTitleLabel" destination="Bc7-Zg-IAq" id="sv4-zk-g2F"/>
                         <outlet property="recentResultsTableView" destination="q60-Mv-XVj" id="d95-Em-MWX"/>
+                        <outlet property="statsTableViewCell" destination="unC-ni-d3Z" id="mS7-2K-19e"/>
                         <outlet property="statusLabel" destination="Bi2-xD-pM1" id="f9i-IO-jbM"/>
+                        <outlet property="statusWinsTitleLabel" destination="Ow1-dQ-pqe" id="ngf-iu-kQM"/>
                         <outlet property="teamLabel" destination="5Ex-ed-xRi" id="1aA-QJ-cn6"/>
                         <outlet property="timeLabel" destination="kzz-cf-FbU" id="3UT-CX-0pr"/>
                     </connections>
