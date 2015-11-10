@@ -27,7 +27,7 @@ class RaceTableViewCell: UITableViewCell {
     func updateCellWithRace(race: Race, indexPath: NSIndexPath) {
         raceNameLabel.text = race.raceName.uppercaseString
         raceCircuitLabel.text = race.circuitName.uppercaseString
-        raceImageView.image = RaceListTableViewController.flageImageFromString(race.raceName)
+        raceImageView.image = RaceController.flageImageFromString(race.raceName)
         raceMonthLabel.text = monthTextFromRaceIndex(indexPath.row)
         raceDaysLabel.text = daysTextFromRaceIndex(indexPath.row)
     }

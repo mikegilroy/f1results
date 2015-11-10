@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -849,52 +848,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driverResultTeamIcon-MERCEDES" translatesAutoresizingMaskIntoConstraints="NO" id="FSI-gl-I3I">
-                                            <rect key="frame" x="8" y="9" width="58" height="37.5"/>
+                                            <rect key="frame" x="8" y="9" width="58" height="37"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="58" id="yoG-LK-Suv"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="United-Kingdom" translatesAutoresizingMaskIntoConstraints="NO" id="zRw-9a-xLe">
-                                            <rect key="frame" x="74" y="8" width="35" height="37.5"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="35" id="HIt-1I-8eQ"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMercedes" translatesAutoresizingMaskIntoConstraints="NO" id="haN-nI-hOJ">
-                                            <rect key="frame" x="280" y="0.0" width="102" height="54"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="102" id="dfF-I2-Lp5"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="675" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-Hr-XSk">
-                                            <rect key="frame" x="542" y="0.0" width="50" height="54"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="1ah-Rb-tMC"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carMercedes" translatesAutoresizingMaskIntoConstraints="NO" id="yaX-1b-92D">
-                                            <rect key="frame" x="390" y="0.0" width="144" height="54"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="144" id="mqu-F7-nVp"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCEDES" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-xR-w6c">
-                                            <rect key="frame" x="123" y="0.0" width="149" height="54"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-gU-lWg">
-                                            <rect key="frame" x="8" y="8" width="46" height="37.5"/>
+                                            <rect key="frame" x="8" y="8" width="46" height="38"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="46" id="0cU-ni-BoR"/>
@@ -903,42 +864,79 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-cW-iYd">
+                                            <rect key="frame" x="74" y="0.0" width="518" height="54"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCEDES" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-xR-w6c">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="54"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="xiv-ZF-CzV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carMercedes" translatesAutoresizingMaskIntoConstraints="NO" id="yaX-1b-92D">
+                                                    <rect key="frame" x="152" y="0.0" width="314" height="54"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="3b5-rw-Y2y"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3b5-rw-Y2y"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="675" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-Hr-XSk">
+                                                    <rect key="frame" x="478" y="0.0" width="40" height="54"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Z3t-28-P0l"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="V1a-xR-w6c" secondAttribute="bottom" id="bbt-FQ-wiA"/>
+                                                <constraint firstItem="V1a-xR-w6c" firstAttribute="top" secondItem="dLY-cW-iYd" secondAttribute="top" id="x4X-iS-uSI"/>
+                                                <constraint firstItem="V1a-xR-w6c" firstAttribute="leading" secondItem="dLY-cW-iYd" secondAttribute="leading" id="yoa-tz-ZLH"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="firstBaseline" secondItem="V1a-xR-w6c" secondAttribute="firstBaseline" id="4h4-qn-ZDG"/>
-                                        <constraint firstItem="V1a-xR-w6c" firstAttribute="leading" secondItem="zRw-9a-xLe" secondAttribute="trailing" constant="14" id="6Yl-SJ-eeA"/>
-                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="top" secondItem="FSI-gl-I3I" secondAttribute="top" constant="-1" id="8bT-7g-u4U"/>
-                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="bottom" secondItem="yaX-1b-92D" secondAttribute="bottom" id="8oZ-E8-bdm"/>
-                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="leading" secondItem="yaX-1b-92D" secondAttribute="trailing" constant="8" symbolic="YES" id="BGp-Bh-4Wt"/>
+                                        <constraint firstItem="dLY-cW-iYd" firstAttribute="leading" secondItem="FSI-gl-I3I" secondAttribute="trailing" constant="8" id="69O-dZ-C6S"/>
                                         <constraint firstItem="FSI-gl-I3I" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" constant="1" id="O6k-5v-SNK"/>
-                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="trailing" secondItem="Cl0-rG-O31" secondAttribute="trailingMargin" id="P6k-Yu-0Wk"/>
-                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="centerY" secondItem="Cl0-rG-O31" secondAttribute="centerY" id="Pud-Wz-cdb"/>
                                         <constraint firstItem="m2m-gU-lWg" firstAttribute="leading" secondItem="Cl0-rG-O31" secondAttribute="leadingMargin" id="RsG-QU-BwX"/>
                                         <constraint firstItem="FSI-gl-I3I" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" constant="1" id="T7B-2o-bJC"/>
-                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="leading" secondItem="FSI-gl-I3I" secondAttribute="trailing" constant="8" id="TwN-dk-Yk5"/>
-                                        <constraint firstItem="yaX-1b-92D" firstAttribute="leading" secondItem="haN-nI-hOJ" secondAttribute="trailing" constant="8" symbolic="YES" id="Vm6-2Y-YpS"/>
-                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="bottom" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-1" id="WgI-RI-zaB"/>
+                                        <constraint firstItem="dLY-cW-iYd" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" constant="-8" id="Tky-M9-FuR"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="m2m-gU-lWg" secondAttribute="bottom" id="Wl9-8c-jYx"/>
-                                        <constraint firstItem="yaX-1b-92D" firstAttribute="top" secondItem="haN-nI-hOJ" secondAttribute="top" id="blF-29-v0y"/>
                                         <constraint firstItem="FSI-gl-I3I" firstAttribute="leading" secondItem="Cl0-rG-O31" secondAttribute="leadingMargin" id="eVR-x7-Alt"/>
-                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="bottom" secondItem="V1a-xR-w6c" secondAttribute="bottom" id="gZJ-y4-VnB"/>
-                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="top" secondItem="yaX-1b-92D" secondAttribute="top" id="gtV-M3-gOM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dLY-cW-iYd" secondAttribute="trailing" id="gyt-3v-P8e"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-1" id="iRH-1x-f5g"/>
                                         <constraint firstItem="m2m-gU-lWg" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" id="kU3-BM-MnY"/>
-                                        <constraint firstItem="V1a-xR-w6c" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="top" id="n9T-R5-Z0D"/>
-                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="leading" secondItem="V1a-xR-w6c" secondAttribute="trailing" constant="8" symbolic="YES" id="qao-v5-EXV"/>
-                                        <constraint firstItem="yaX-1b-92D" firstAttribute="bottom" secondItem="haN-nI-hOJ" secondAttribute="bottom" id="ut7-Y9-KMG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dLY-cW-iYd" secondAttribute="bottom" constant="-8" id="tCL-mL-SWR"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-0.5" id="wTO-Ff-JOi"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="O6k-5v-SNK"/>
+                                            <exclude reference="iRH-1x-f5g"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="pointsLabel" destination="O5u-Hr-XSk" id="ygY-5t-CEM"/>
+                                    <outlet property="positionLabel" destination="m2m-gU-lWg" id="vyy-up-Xze"/>
+                                    <outlet property="teamCarImageView" destination="yaX-1b-92D" id="wtX-hT-OlZ"/>
+                                    <outlet property="teamIconImageView" destination="FSI-gl-I3I" id="j3k-OD-UdH"/>
+                                    <outlet property="teamNameLabel" destination="V1a-xR-w6c" id="vRH-r4-41O"/>
                                     <segue destination="lu2-BU-k05" kind="show" identifier="toConstructorDetail" id="syE-sy-ENo"/>
                                 </connections>
                             </tableViewCell>
@@ -1132,7 +1130,6 @@
         <image name="driverHelmetIcon" width="32" height="32"/>
         <image name="driverResultTeamIcon-MERCEDES" width="57" height="28"/>
         <image name="flagIcon" width="25" height="25"/>
-        <image name="logoMercedes" width="110" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RGR-MG-Q17"/>

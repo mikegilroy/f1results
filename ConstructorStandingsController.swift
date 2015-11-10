@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class  ConstructorStandingsController {
     
@@ -73,6 +74,94 @@ class  ConstructorStandingsController {
                 completion(constructorStandingsArray: nil)
                 print("Error getting json data")
             }
+        }
+    }
+    
+    static func flageImageFromStanding(standing: ConstructorStanding) -> UIImage {
+        let nationality = standing.nationality.lowercaseString
+        if nationality.containsString("british") {
+            return UIImage(named: "United-Kingdom")!
+        } else if nationality.containsString("german") {
+            return UIImage(named: "Germany")!
+        } else if nationality.containsString("italian") {
+            return UIImage(named: "Italy")!
+        } else if nationality.containsString("indian") {
+            return UIImage(named: "India")!
+        } else if nationality.containsString("austrian") {
+            return UIImage(named: "Austria")!
+        } else {
+            return UIImage(named: "India")!
+        }
+    }
+    
+    static func teamIconFromConstructorStanding(standing: ConstructorStanding) -> UIImage {
+        let team = standing.teamName.lowercaseString
+        if team.containsString("merc") {
+            return UIImage(named: "driverResultTeamIcon-MERCEDES")!
+        } else if team.containsString("red") {
+            return UIImage(named: "driverResultTeamIcon-REDBULL")!
+        } else if team.containsString("sauber") {
+            return UIImage(named: "driverResultTeamIcon-SAUBER")!
+        } else if team.containsString("ferrari") {
+            return UIImage(named: "driverResultTeamIcon-FERRARI")!
+        } else if team.containsString("mclaren") {
+            return UIImage(named: "driverResultTeamIcon-MCLAREN")!
+        } else if team.containsString("toro") {
+            return UIImage(named: "driverResultTeamIcon-TOROROSSO")!
+        } else if team.containsString("williams") {
+            return UIImage(named: "driverResultTeamIcon-WILLIAMS")!
+        } else if team.containsString("marussia") {
+            return UIImage(named: "driverResultTeamIcon-MARUSSIA")!
+        } else {
+            return UIImage(named: "driverResultTeamIcon-LOTUS")!
+        }
+    }
+    
+    static func teamLogoFromConstructorStanding(standing: ConstructorStanding) -> UIImage {
+        let team = standing.teamName.lowercaseString
+        if team.containsString("merc") {
+            return UIImage(named: "logoMercedes")!
+        } else if team.containsString("red") {
+            return UIImage(named: "logoRedBull")!
+        } else if team.containsString("sauber") {
+            return UIImage(named: "logoSauber")!
+        } else if team.containsString("ferrari") {
+            return UIImage(named: "logoFerrari")!
+        } else if team.containsString("mclaren") {
+            return UIImage(named: "logoMclaren")!
+        } else if team.containsString("toro") {
+            return UIImage(named: "logoToroRosso")!
+        } else if team.containsString("williams") {
+            return UIImage(named: "logoWilliams")!
+        } else if team.containsString("india") {
+            return UIImage(named: "logoForceIndia")!
+        } else {
+            return UIImage(named: "logoLotus")!
+        }
+    }
+    
+    static func teamCarFromConstructorStanding(standing: ConstructorStanding) -> UIImage {
+        let team = standing.teamName.lowercaseString
+        if team.containsString("merc") {
+            return UIImage(named: "carMercedes")!
+        } else if team.containsString("red") {
+            return UIImage(named: "carRedBull")!
+        } else if team.containsString("sauber") {
+            return UIImage(named: "carSauber")!
+        } else if team.containsString("ferrari") {
+            return UIImage(named: "carFerrari")!
+        } else if team.containsString("mclaren") {
+            return UIImage(named: "carMclaren")!
+        } else if team.containsString("toro") {
+            return UIImage(named: "carToroRosso")!
+        } else if team.containsString("williams") {
+            return UIImage(named: "carWilliams")!
+        } else if team.containsString("lotus") {
+            return UIImage(named: "carLotus")!
+        } else if team.containsString("india") {
+            return UIImage(named: "carForceIndia")!
+        } else {
+            return UIImage(named: "carMarussia")!
         }
     }
     

@@ -17,7 +17,7 @@ class ConstructorStanding {
     private let kPoints = "points"
     private let kWins = "wins"
     
-    var name: String
+    var teamName: String
     var nationality: String
     var urlString: String
     var position: Int
@@ -38,7 +38,7 @@ class ConstructorStanding {
         self.position = Int(position)!
         self.points = Int(points)!
         self.wins = Int(wins)!
-        self.name = name
+        self.teamName = name
         self.nationality = nationality
         self.urlString = urlString
         

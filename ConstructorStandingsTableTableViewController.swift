@@ -18,7 +18,9 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
 
         ConstructorStandingsController.getDriverStandings { (constructorStandingsArray) -> Void in
             if let constructorStandingsArray = constructorStandingsArray {
-                self.constructorStandingsArray = constructorStandingsArray
+                var newArray = constructorStandingsArray
+                newArray.removeLast()
+                self.constructorStandingsArray = newArray
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                     //self.refreshControl?.endRefreshing()
@@ -48,10 +50,9 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("constructorStandingCell", forIndexPath: indexPath) as! ConstructorStandingTableViewCell
 
-//        let constructorStanding = self.constructorStandingsArray[indexPath.row]
+        let constructorStanding = self.constructorStandingsArray[indexPath.row]
         
-//        cell.textLabel?.text = constructorStanding.name
-//        cell.detailTextLabel?.text = "\(constructorStanding.points)"
+        cell.updateCellWithConstructorStanding(constructorStanding)
         
         return cell
     }

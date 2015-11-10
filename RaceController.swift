@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RaceController {
     
@@ -66,6 +67,50 @@ class RaceController {
                 completion(racesArray: nil)
                 print("Error getting json data")
             }
+        }
+    }
+    
+    
+    static func flageImageFromString(raceName: String) -> UIImage {
+        let raceName = raceName.lowercaseString
+        if raceName.containsString("australia") {
+            return UIImage(named: "Australia")!
+        } else if raceName.containsString("british") {
+            return UIImage(named: "United-Kingdom")!
+        } else if raceName.containsString("german") {
+            return UIImage(named: "Germany")!
+        } else if raceName.containsString("malaysia") {
+            return UIImage(named: "Malaysia")!
+        } else if raceName.containsString("monaco") {
+            return UIImage(named: "Monaco")!
+        } else if raceName.containsString("spanish") {
+            return UIImage(named: "Spain")!
+        } else if raceName.containsString("chinese") {
+            return UIImage(named: "China")!
+        } else if raceName.containsString("canadian") {
+            return UIImage(named: "Canada")!
+        } else if raceName.containsString("bahrain") {
+            return UIImage(named: "Bahrain")!
+        } else if raceName.containsString("austrian") {
+            return UIImage(named: "Austria")!
+        } else if raceName.containsString("hungarian") {
+            return UIImage(named: "Hungary")!
+        } else if raceName.containsString("belgian") {
+            return UIImage(named: "Belgium")!
+        } else if raceName.containsString("italian") {
+            return UIImage(named: "Italy")!
+        } else if raceName.containsString("singapore") {
+            return UIImage(named: "Singapore")!
+        } else if raceName.containsString("japanese") {
+            return UIImage(named: "Japan")!
+        } else if raceName.containsString("russian") {
+            return UIImage(named: "Russia")!
+        } else if raceName.containsString("states") {
+            return UIImage(named: "United-States")!
+        } else if raceName.containsString("mexican") {
+            return UIImage(named: "Mexico")!
+        } else  {
+            return UIImage(named: "United-Kingdom")!
         }
     }
     
