@@ -1,25 +1,25 @@
 //
-//  DriverStandingsController.swift
+//  ConstructorStandingsController.swift
 //  F1Results
 //
-//  Created by Mike Gilroy on 08/11/2015.
+//  Created by Mike Gilroy on 09/11/2015.
 //  Copyright © 2015 Mike Gilroy. All rights reserved.
 //
 
 import Foundation
 
-class DriverStandingsController {
+class  ConstructorStandingsController {
     
-    var driverStandingsArray: [DriverStanding] = []
+    var constructorStandingsArray: [ConstructorStanding] = []
     
-    let driverStandingsURL = "http://ergast.com/api/f1/current/driverStandings.json"
+    let constructorStandingsURLString = "http://ergast.com/api/f1/current/constructorStandings.json"
     
     
-    static func getDriverStandings(completion: (driverStandingsArray: [DriverStanding]?) -> Void) {
+    static func getDriverStandings(completion: (driverStandingsArray: [ConstructorStanding]?) -> Void) {
         
-        let driverStandingsUrl = NSURL(string: "http://ergast.com/api/f1/current/driverStandings.json")!
+        let constructorStandingsURL = NSURL(string: "http://ergast.com/api/f1/current/constructorStandings.json")!
         
-        NetworkController.dataAtURL(driverStandingsUrl) { (data) -> Void in
+        NetworkController.dataAtURL(constructorStandingsURL) { (data) -> Void in
             
             guard let data = data else { completion(driverStandingsArray: nil); return }
             
@@ -34,17 +34,17 @@ class DriverStandingsController {
                                 
                                 let standingsDictionary = standingsTableArray[0]
                                 
-                                if let driverStandingsArray = standingsDictionary["DriverStandings"] as? [[String: AnyObject]] {
+                                if let constructorStandingsArray = standingsDictionary["ConstructorStandings"] as? [[String: AnyObject]] {
                                     
-                                    var standingsArray: [DriverStanding] = []
+                                    var standingsArray: [ConstructorStanding] = []
                                     
-                                    for driver in driverStandingsArray {
+                                    for constructor in constructorStandingsArray {
                                         
                                         // init Race object with name, circuit, round
-                                        let driverStandingObject = DriverStanding(jsonDictionary: driver)
+                                        let constructorStandingObject = ConstructorStanding(jsonDictionary: constructor)
                                         
                                         // append race to racesArray
-                                        standingsArray.append(driverStandingObject)
+                                        standingsArray.append(constructorStandingObject)
                                     }
                                     
                                     completion(driverStandingsArray: standingsArray)
@@ -75,6 +75,5 @@ class DriverStandingsController {
             }
         }
     }
-
     
 }
