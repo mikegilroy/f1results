@@ -830,17 +830,17 @@
             </objects>
             <point key="canvasLocation" x="1639" y="1086"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Constructor Standings Table Table View Controller-->
         <scene sceneID="0h1-N9-Xxm">
             <objects>
-                <tableViewController id="G10-WG-agS" sceneMemberID="viewController">
+                <tableViewController id="G10-WG-agS" customClass="ConstructorStandingsTableTableViewController" customModule="F1Results" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z3u-Qo-ZQd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nEx-Iu-X0i">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="constructorStandingCell" id="nEx-Iu-X0i">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nEx-Iu-X0i" id="Cl0-rG-O31">

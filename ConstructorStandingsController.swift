@@ -15,13 +15,13 @@ class  ConstructorStandingsController {
     let constructorStandingsURLString = "http://ergast.com/api/f1/current/constructorStandings.json"
     
     
-    static func getDriverStandings(completion: (driverStandingsArray: [ConstructorStanding]?) -> Void) {
+    static func getDriverStandings(completion: (constructorStandingsArray: [ConstructorStanding]?) -> Void) {
         
         let constructorStandingsURL = NSURL(string: "http://ergast.com/api/f1/current/constructorStandings.json")!
         
         NetworkController.dataAtURL(constructorStandingsURL) { (data) -> Void in
             
-            guard let data = data else { completion(driverStandingsArray: nil); return }
+            guard let data = data else { completion(constructorStandingsArray: nil); return }
             
             do {
                 if let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] {
@@ -47,30 +47,30 @@ class  ConstructorStandingsController {
                                         standingsArray.append(constructorStandingObject)
                                     }
                                     
-                                    completion(driverStandingsArray: standingsArray)
+                                    completion(constructorStandingsArray: standingsArray)
                                     
                                 } else {
-                                    completion(driverStandingsArray: nil)
+                                    completion(constructorStandingsArray: nil)
                                     print("No Driver Standings array")
                                 }
                                 
                             } else {
                                 print("No raceTable found")
-                                completion(driverStandingsArray: nil)
+                                completion(constructorStandingsArray: nil)
                             }
                         } else {
                             print("No Standings table")
-                            completion(driverStandingsArray: nil)
+                            completion(constructorStandingsArray: nil)
                         }
                     } else {
-                        completion(driverStandingsArray: nil)
+                        completion(constructorStandingsArray: nil)
                         print("No MRData found")
                     }
                 } else {
-                    completion(driverStandingsArray: nil)
+                    completion(constructorStandingsArray: nil)
                 }
             } catch {
-                completion(driverStandingsArray: nil)
+                completion(constructorStandingsArray: nil)
                 print("Error getting json data")
             }
         }
