@@ -46,14 +46,19 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("constructorStandingCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("constructorStandingCell", forIndexPath: indexPath) as! ConstructorStandingTableViewCell
 
-        let constructorStanding = self.constructorStandingsArray[indexPath.row]
+//        let constructorStanding = self.constructorStandingsArray[indexPath.row]
         
-        cell.textLabel?.text = constructorStanding.name
-        cell.detailTextLabel?.text = "\(constructorStanding.points)"
+//        cell.textLabel?.text = constructorStanding.name
+//        cell.detailTextLabel?.text = "\(constructorStanding.points)"
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 54
+
     }
     
 

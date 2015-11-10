@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -675,7 +676,7 @@
             </objects>
             <point key="canvasLocation" x="143" y="270"/>
         </scene>
-        <!--Drivers-->
+        <!--Driver Standings-->
         <scene sceneID="7CT-8z-XwK">
             <objects>
                 <tableViewController id="XDz-0p-kiV" customClass="DriverStandingsTableViewController" customModule="F1Results" customModuleProvider="target" sceneMemberID="viewController">
@@ -815,7 +816,7 @@
                             <outlet property="delegate" destination="XDz-0p-kiV" id="gyD-rI-GAl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Drivers" id="zts-hO-D7q">
+                    <navigationItem key="navigationItem" title="Driver Standings" id="zts-hO-D7q">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kca-hh-i20"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="OTr-tE-mMJ">
@@ -830,7 +831,7 @@
             </objects>
             <point key="canvasLocation" x="1639" y="1086"/>
         </scene>
-        <!--Constructor Standings Table Table View Controller-->
+        <!--Constructor Standings-->
         <scene sceneID="0h1-N9-Xxm">
             <objects>
                 <tableViewController id="G10-WG-agS" customClass="ConstructorStandingsTableTableViewController" customModule="F1Results" customModuleProvider="target" sceneMemberID="viewController">
@@ -840,13 +841,101 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="constructorStandingCell" id="nEx-Iu-X0i">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="constructorStandingCell" rowHeight="54" id="nEx-Iu-X0i" customClass="ConstructorStandingTableViewCell" customModule="F1Results" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nEx-Iu-X0i" id="Cl0-rG-O31">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driverResultTeamIcon-MERCEDES" translatesAutoresizingMaskIntoConstraints="NO" id="FSI-gl-I3I">
+                                            <rect key="frame" x="8" y="9" width="58" height="37.5"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="yoG-LK-Suv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="United-Kingdom" translatesAutoresizingMaskIntoConstraints="NO" id="zRw-9a-xLe">
+                                            <rect key="frame" x="74" y="8" width="35" height="37.5"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="HIt-1I-8eQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMercedes" translatesAutoresizingMaskIntoConstraints="NO" id="haN-nI-hOJ">
+                                            <rect key="frame" x="280" y="0.0" width="102" height="54"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="dfF-I2-Lp5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="675" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-Hr-XSk">
+                                            <rect key="frame" x="542" y="0.0" width="50" height="54"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="1ah-Rb-tMC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carMercedes" translatesAutoresizingMaskIntoConstraints="NO" id="yaX-1b-92D">
+                                            <rect key="frame" x="390" y="0.0" width="144" height="54"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="144" id="mqu-F7-nVp"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCEDES" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-xR-w6c">
+                                            <rect key="frame" x="123" y="0.0" width="149" height="54"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-gU-lWg">
+                                            <rect key="frame" x="8" y="8" width="46" height="37.5"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="0cU-ni-BoR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="firstBaseline" secondItem="V1a-xR-w6c" secondAttribute="firstBaseline" id="4h4-qn-ZDG"/>
+                                        <constraint firstItem="V1a-xR-w6c" firstAttribute="leading" secondItem="zRw-9a-xLe" secondAttribute="trailing" constant="14" id="6Yl-SJ-eeA"/>
+                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="top" secondItem="FSI-gl-I3I" secondAttribute="top" constant="-1" id="8bT-7g-u4U"/>
+                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="bottom" secondItem="yaX-1b-92D" secondAttribute="bottom" id="8oZ-E8-bdm"/>
+                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="leading" secondItem="yaX-1b-92D" secondAttribute="trailing" constant="8" symbolic="YES" id="BGp-Bh-4Wt"/>
+                                        <constraint firstItem="FSI-gl-I3I" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" constant="1" id="O6k-5v-SNK"/>
+                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="trailing" secondItem="Cl0-rG-O31" secondAttribute="trailingMargin" id="P6k-Yu-0Wk"/>
+                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="centerY" secondItem="Cl0-rG-O31" secondAttribute="centerY" id="Pud-Wz-cdb"/>
+                                        <constraint firstItem="m2m-gU-lWg" firstAttribute="leading" secondItem="Cl0-rG-O31" secondAttribute="leadingMargin" id="RsG-QU-BwX"/>
+                                        <constraint firstItem="FSI-gl-I3I" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" constant="1" id="T7B-2o-bJC"/>
+                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="leading" secondItem="FSI-gl-I3I" secondAttribute="trailing" constant="8" id="TwN-dk-Yk5"/>
+                                        <constraint firstItem="yaX-1b-92D" firstAttribute="leading" secondItem="haN-nI-hOJ" secondAttribute="trailing" constant="8" symbolic="YES" id="Vm6-2Y-YpS"/>
+                                        <constraint firstItem="zRw-9a-xLe" firstAttribute="bottom" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-1" id="WgI-RI-zaB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="m2m-gU-lWg" secondAttribute="bottom" id="Wl9-8c-jYx"/>
+                                        <constraint firstItem="yaX-1b-92D" firstAttribute="top" secondItem="haN-nI-hOJ" secondAttribute="top" id="blF-29-v0y"/>
+                                        <constraint firstItem="FSI-gl-I3I" firstAttribute="leading" secondItem="Cl0-rG-O31" secondAttribute="leadingMargin" id="eVR-x7-Alt"/>
+                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="bottom" secondItem="V1a-xR-w6c" secondAttribute="bottom" id="gZJ-y4-VnB"/>
+                                        <constraint firstItem="O5u-Hr-XSk" firstAttribute="top" secondItem="yaX-1b-92D" secondAttribute="top" id="gtV-M3-gOM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-1" id="iRH-1x-f5g"/>
+                                        <constraint firstItem="m2m-gU-lWg" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="topMargin" id="kU3-BM-MnY"/>
+                                        <constraint firstItem="V1a-xR-w6c" firstAttribute="top" secondItem="Cl0-rG-O31" secondAttribute="top" id="n9T-R5-Z0D"/>
+                                        <constraint firstItem="haN-nI-hOJ" firstAttribute="leading" secondItem="V1a-xR-w6c" secondAttribute="trailing" constant="8" symbolic="YES" id="qao-v5-EXV"/>
+                                        <constraint firstItem="yaX-1b-92D" firstAttribute="bottom" secondItem="haN-nI-hOJ" secondAttribute="bottom" id="ut7-Y9-KMG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FSI-gl-I3I" secondAttribute="bottom" constant="-0.5" id="wTO-Ff-JOi"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="O6k-5v-SNK"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
@@ -859,7 +948,7 @@
                             <outlet property="delegate" destination="G10-WG-agS" id="CKu-d6-W9m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5d8-rf-gRN"/>
+                    <navigationItem key="navigationItem" title="Constructor Standings" id="5d8-rf-gRN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRN-eQ-KnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1037,11 +1126,13 @@
         <image name="GB" width="64" height="64"/>
         <image name="HAM" width="1024" height="1024"/>
         <image name="United-Kingdom" width="64" height="64"/>
+        <image name="carMercedes" width="292" height="69"/>
         <image name="circuitIcon" width="32" height="32"/>
         <image name="constructorsIcon" width="37" height="37"/>
         <image name="driverHelmetIcon" width="32" height="32"/>
         <image name="driverResultTeamIcon-MERCEDES" width="57" height="28"/>
         <image name="flagIcon" width="25" height="25"/>
+        <image name="logoMercedes" width="110" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RGR-MG-Q17"/>
