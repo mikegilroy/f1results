@@ -12,6 +12,10 @@ class DriverStandingsTableViewController: UITableViewController {
 
     var driverStandingsArray : [DriverStanding] = []
     
+    override func viewWillAppear(animated: Bool) {
+        loadDriverStandings()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDriverStandings()
@@ -37,10 +41,6 @@ class DriverStandingsTableViewController: UITableViewController {
         loadDriverStandings()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
