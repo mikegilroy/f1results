@@ -54,23 +54,6 @@ class DriverProfileTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 192
-        case 1:
-            if self.viewMode == .driverStanding {
-                return 80
-                
-            } else {
-                return 225.5
-            }
-        case 2:
-            return 333
-        default:
-           return 333
-        }
-    }
     
     func updateWithRaceResult(raceResult: RaceResult) {
         
@@ -243,30 +226,23 @@ class DriverProfileTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if tableView == recentResultsTableView {
-//            return "Recent Race Results"
-//        }
-//        return ""
-//    }
-//    
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        
-//        if tableView == recentResultsTableView {
-//            return 1
-//        } else {
-//            return 0
-//        }
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if tableView == recentResultsTableView {
-//            return 5
-//        } else {
-//            return 0
-//        }
-//    }
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Recent Results"
+    }
     
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return 5
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("recentDriverResultCell", forIndexPath: indexPath)
+        return cell
+    }
     
 
     /*
