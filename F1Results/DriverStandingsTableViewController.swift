@@ -106,7 +106,7 @@ class DriverStandingsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "toDriverProfile" {
+        if segue.identifier == "toDriverStandingProfile" {
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 let driverStanding = driverStandingsArray[indexPath.row]

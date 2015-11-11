@@ -89,7 +89,7 @@ class RaceResultsTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
      
-        if segue.identifier == "toDriverProfile" {
+        if segue.identifier == "toDriverRaceResultProfile" {
             
             let driverProfileScene = segue.destinationViewController as! DriverProfileTableViewController
             
