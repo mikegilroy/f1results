@@ -17,18 +17,38 @@ class DriverProfileTableViewController: UIViewController {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var driverPhotoImageView: UIImageView!
     @IBOutlet weak var carNumberLabel: UILabel!
-
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var finishPositionLabel: UILabel!
+    
+    @IBOutlet weak var gridPositionLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var gridPositionLabel: UILabel!
+
     @IBOutlet weak var finalPositionLabel: UILabel!
     @IBOutlet weak var fastestLapTimeLabel: UILabel!
     
     @IBOutlet weak var pointsTitleLabel: UILabel!
     @IBOutlet weak var statusWinsTitleLabel: UILabel!
+    
+    
+    
+//    @IBOutlet weak var driverNameLabel: UILabel!
+//    @IBOutlet weak var flagImageView: UIImageView!
+//    @IBOutlet weak var driverPhotoImageView: UIImageView!
+//    @IBOutlet weak var carNumberLabel: UILabel!
+//
+//    @IBOutlet weak var teamLabel: UILabel!
+//    @IBOutlet weak var finishPositionLabel: UILabel!
+//    @IBOutlet weak var pointsLabel: UILabel!
+//    @IBOutlet weak var statusLabel: UILabel!
+//    @IBOutlet weak var timeLabel: UILabel!
+//    @IBOutlet weak var gridPositionLabel: UILabel!
+//    @IBOutlet weak var finalPositionLabel: UILabel!
+//    @IBOutlet weak var fastestLapTimeLabel: UILabel!
+//    
+//    @IBOutlet weak var pointsTitleLabel: UILabel!
+//    @IBOutlet weak var statusWinsTitleLabel: UILabel!
     
     
     var raceResult: RaceResult?
