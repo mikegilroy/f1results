@@ -24,9 +24,7 @@ class ConstructorStandingTableViewCell: UITableViewCell {
     func updateCellWithConstructorStanding(standing: ConstructorStanding) {
         self.positionLabel.text = "\(standing.position)"
         self.teamIconImageView.image = ConstructorStandingsController.teamIconFromConstructorStanding(standing)
-        //self.nationalityImageView.image = ConstructorStandingsController.flageImageFromStanding(standing)
         self.teamNameLabel.text = standing.teamName.uppercaseString
-        // self.teamLogoImageView.image = ConstructorStandingsController.teamLogoFromConstructorStanding(standing)
         self.teamCarImageView.image = ConstructorStandingsController.teamCarFromConstructorStanding(standing)
         self.pointsLabel.text = "\(standing.points)"
     }
