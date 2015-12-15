@@ -11,11 +11,23 @@ import UIKit
 class ConstructorStandingsTableTableViewController: UITableViewController {
 
     
-    var constructorStandingsArray: [ConstructorStanding] = []
+    var constructorStandingsArray: [ConstructorStanding] = ConstructorStandingsController.sharedInstance.constructorStandingsArray
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadStandings()
+    }
 
+    // MARK: Actions
+    
+    @IBAction func userRefreshedTable(sender: AnyObject) {
+        loadStandings()
+    }
+    
+    
+    // MARK: Helper Functions
+    
+    func loadStandings() {
         ConstructorStandingsController.getDriverStandings { (constructorStandingsArray) -> Void in
             if let constructorStandingsArray = constructorStandingsArray {
                 var newArray = constructorStandingsArray
@@ -23,7 +35,7 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
                 self.constructorStandingsArray = newArray
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
-                    //self.refreshControl?.endRefreshing()
+                    self.refreshControl?.endRefreshing()
                     print(constructorStandingsArray)
                 })
             } else {
@@ -31,15 +43,8 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     // MARK: - Table view data source
-
-
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

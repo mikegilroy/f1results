@@ -111,7 +111,7 @@ class RaceController {
             return UIImage(named: "United-States")!
         } else if raceName.containsString("mexican") {
             return UIImage(named: "Mexico")!
-        } else if raceName.containsString("dhabi") {
+        } else if raceName.containsString("abu") {
             return UIImage(named: "United-Arab-Emirates")!
         } else if raceName.containsString("brazil") {
             return UIImage(named: "Brazil")!

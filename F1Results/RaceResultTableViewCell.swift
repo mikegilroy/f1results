@@ -10,25 +10,17 @@ import UIKit
 
 class RaceResultTableViewCell: UITableViewCell {
 
+    // MARK: Outelts
+    
     @IBOutlet weak var teamIconImageView: UIImageView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
     
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+    // MARK: Helper Functions
     
     func updateCellWithRaceResult(raceResult: RaceResult) {
         self.firstNameLabel.text = raceResult.firstName.uppercaseString
@@ -50,7 +42,6 @@ class RaceResultTableViewCell: UITableViewCell {
         self.positionLabel.text = "\(raceResult.position)"
         self.teamIconImageView.image = teamIconFromRaceResult(raceResult)
     }
-    
     
     func teamIconFromRaceResult(raceResult: RaceResult) -> UIImage {
         let team = raceResult.teamName.lowercaseString

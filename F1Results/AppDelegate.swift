@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         
+        // Start network calls
+        RaceController.getRaces { (_) -> Void in }
+        DriverStandingsController.getDriverStandings { (_) -> Void in }
+        ConstructorStandingsController.getDriverStandings { (_) -> Void in }
+        
         return true
     }
 

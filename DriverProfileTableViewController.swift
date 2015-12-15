@@ -10,32 +10,7 @@ import UIKit
 
 class DriverProfileTableViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var headerView: UIView!
-    // Properties / Outlets
-    
-    @IBOutlet weak var driverNameLabel: UILabel!
-    @IBOutlet weak var flagImageView: UIImageView!
-    @IBOutlet weak var driverPhotoImageView: UIImageView!
-    @IBOutlet weak var carNumberLabel: UILabel!
-    @IBOutlet weak var teamLabel: UILabel!
-    @IBOutlet weak var finishPositionLabel: UILabel!
-    
-    @IBOutlet weak var gridPositionLabel: UILabel!
-    @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-
-    @IBOutlet weak var finalPositionLabel: UILabel!
-    @IBOutlet weak var fastestLapTimeLabel: UILabel!
-    
-    @IBOutlet weak var pointsTitleLabel: UILabel!
-    @IBOutlet weak var statusWinsTitleLabel: UILabel!
-    @IBOutlet weak var timeTitleLabel: UILabel!
-    @IBOutlet weak var gridPositionTitleLabel: UILabel!
-    @IBOutlet weak var finalPositionTitleLabel: UILabel!
-    @IBOutlet weak var fastestLapTitleLabel: UILabel!
-    
+    // MARK: Properties
     
     var raceResult: RaceResult?
     var race: Race?
@@ -50,7 +25,20 @@ class DriverProfileTableViewController: UIViewController {
         case raceResult
     }
     
+    // MARK: Outlets
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    // MARK: ViewDid Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateWithRecentResults()
+    }
+
+    
+    // MARK: Helper Methods
     
     func updateWithRecentResults() {
         self.recentResults = []
@@ -64,20 +52,12 @@ class DriverProfileTableViewController: UIViewController {
         self.tableView.reloadData()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateWithRecentResults()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-    }
-
-    
     
 }
 
+
+
 extension DriverProfileTableViewController: UITableViewDataSource, UITableViewDelegate {
-    
 
     // MARK: - Table view data source
 

@@ -11,6 +11,8 @@ import UIKit
 
 class  ConstructorStandingsController {
     
+    static let sharedInstance = ConstructorStandingsController()
+    
     var constructorStandingsArray: [ConstructorStanding] = []
     
     let constructorStandingsURLString = "http://ergast.com/api/f1/current/constructorStandings.json"
@@ -49,6 +51,7 @@ class  ConstructorStandingsController {
                                     }
                                     
                                     completion(constructorStandingsArray: standingsArray)
+                                    ConstructorStandingsController.sharedInstance.constructorStandingsArray = standingsArray
                                     
                                 } else {
                                     completion(constructorStandingsArray: nil)

@@ -10,18 +10,18 @@ import UIKit
 
 class DriverStandingsTableViewCell: UITableViewCell {
     
+    // MARK: Outlets
+    
     @IBOutlet weak var teamIconImageView: UIImageView!
     @IBOutlet weak var positionLabel: UILabel!
-    
     @IBOutlet weak var nationalityImageView: UIImageView!
-    
     @IBOutlet weak var firstNameLabel: UILabel!
-    
     @IBOutlet weak var lastNameLabel: UILabel!
-    
     @IBOutlet weak var teamNameLabel: UILabel!
-    
     @IBOutlet weak var pointsLabel: UILabel!
+    
+    
+    // MARK: Helper Methods
     
     func updateCellFromDriverStanding(driverStanding: DriverStanding) {
         self.firstNameLabel.text = driverStanding.firstName.uppercaseString
@@ -37,8 +37,6 @@ class DriverStandingsTableViewCell: UITableViewCell {
         }
         self.nationalityImageView.image = imageFromNationality(driverStanding.nationality)
     }
-    
-    
     
     func teamIconFromRaceResult(driverStanding: DriverStanding) -> UIImage {
         let team = driverStanding.teamName.lowercaseString
@@ -99,10 +97,4 @@ class DriverStandingsTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-
 }

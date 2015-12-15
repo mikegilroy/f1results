@@ -10,25 +10,27 @@ import UIKit
 
 class RaceListTableViewController: UITableViewController {
 
+    // MARK: Properties
+    
     var races: [Race]?
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "brushedSteel")!)
-        loadRaces()
-        
-        self.prefersStatusBarHidden()
-        
-        
-        
-    }
+    // MARK: Actions
 
     @IBAction func userRefreshedTable(sender: AnyObject) {
         loadRaces()
     }
+    
+    
+    // MARK: ViewDid Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadRaces()
+    }
 
+    
+    // MARK: Helper Functions
     
     func loadRaces() {
         RaceController.getRaces { (racesArray) -> Void in
@@ -45,15 +47,9 @@ class RaceListTableViewController: UITableViewController {
             }
         }
     }
-    
-    
-    
-   
 
-    
     
     // MARK: - Table view data source
-
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -64,7 +60,6 @@ class RaceListTableViewController: UITableViewController {
         }
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("raceCell", forIndexPath: indexPath) as! RaceTableViewCell
 
@@ -81,50 +76,12 @@ class RaceListTableViewController: UITableViewController {
         return 54
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
 
   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if segue.identifier == "toRaceResult" {
-            
             guard let races = races else { return }
             
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -141,5 +98,4 @@ class RaceListTableViewController: UITableViewController {
         }
     }
     
-
 }

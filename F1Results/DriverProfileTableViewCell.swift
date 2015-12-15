@@ -9,6 +9,8 @@
 import UIKit
 
 class DriverProfileTableViewCell: UITableViewCell {
+    
+    // MARK: Outlets
 
     @IBOutlet weak var driverPhotoImageView: UIImageView!
     @IBOutlet weak var driverNameLabel: UILabel!
@@ -31,6 +33,8 @@ class DriverProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var finalPositionTitleLabel: UILabel!
     @IBOutlet weak var fastestLapTitleLabel: UILabel!
     
+    
+    // MARK: Helper Methods
     
     func updateCellWithRaceResult(raceResult: RaceResult) {
         self.driverNameLabel.text = raceResult.fullName

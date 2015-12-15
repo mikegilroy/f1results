@@ -10,19 +10,16 @@ import UIKit
 
 class RaceTableViewCell: UITableViewCell {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var raceImageView: UIImageView!
-    
     @IBOutlet weak var raceNameLabel: UILabel!
-    
     @IBOutlet weak var raceCircuitLabel: UILabel!
-    
     @IBOutlet weak var raceMonthLabel: UILabel!
-    
     @IBOutlet weak var raceDaysLabel: UILabel!
     
     
-    
-    // MARK: Functions
+    // MARK: Helper Functions
     
     func updateCellWithRace(race: Race, indexPath: NSIndexPath) {
         raceNameLabel.text = race.raceName.uppercaseString
@@ -80,13 +77,6 @@ class RaceTableViewCell: UITableViewCell {
         case 18: return "27-29"
         default: return ""
         }
-    }
-    
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
     }
 
 }

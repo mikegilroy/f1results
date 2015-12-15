@@ -982,6 +982,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Constructor Standings" id="5d8-rf-gRN"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="NGu-n2-tiG">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <connections>
+                            <action selector="userRefreshedTable:" destination="G10-WG-agS" eventType="valueChanged" id="KEX-i4-cTE"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRN-eQ-KnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

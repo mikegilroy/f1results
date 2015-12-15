@@ -17,6 +17,9 @@ class RecentDriverResultTableViewCell: UITableViewCell {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
+    
+    // MARK: Helper Methods
+    
     func updateCellWithResult(result: RecentDriverResult) {
         flagImageView.image = RaceController.flageImageFromString(result.race)
         raceNameLabel.text = result.race.uppercaseString

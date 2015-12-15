@@ -10,6 +10,8 @@ import Foundation
 
 class DriverStandingsController {
     
+    static let sharedInstance = DriverStandingsController()
+    
     var driverStandingsArray: [DriverStanding] = []
     
     let driverStandingsURL = "http://ergast.com/api/f1/current/driverStandings.json"
@@ -48,6 +50,7 @@ class DriverStandingsController {
                                     }
                                     
                                     completion(driverStandingsArray: standingsArray)
+                                    DriverStandingsController.sharedInstance.driverStandingsArray = standingsArray
                                     
                                 } else {
                                     completion(driverStandingsArray: nil)

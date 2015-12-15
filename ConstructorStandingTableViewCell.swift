@@ -10,27 +10,16 @@ import UIKit
 
 class ConstructorStandingTableViewCell: UITableViewCell {
 
-    // MARK: Properties / Outlets
+    // MARK: Outlets
     
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var teamIconImageView: UIImageView!
-    @IBOutlet weak var nationalityImageView: UIImageView!
     @IBOutlet weak var teamNameLabel: UILabel!
-    @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var teamCarImageView: UIImageView!
     @IBOutlet weak var pointsLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+   
+    // MARK: Helper Methods
     
     func updateCellWithConstructorStanding(standing: ConstructorStanding) {
         self.positionLabel.text = "\(standing.position)"
@@ -41,7 +30,5 @@ class ConstructorStandingTableViewCell: UITableViewCell {
         self.teamCarImageView.image = ConstructorStandingsController.teamCarFromConstructorStanding(standing)
         self.pointsLabel.text = "\(standing.points)"
     }
-    
-    
 
 }
