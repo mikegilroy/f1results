@@ -14,6 +14,7 @@ class RecentDriverResult {
     var position: Int = 0
     var points: String = ""
     var status: String = ""
+    var roundNumber: Int = 0
     
     init(race: Race, driverCode: String) {
         for result in race.raceResultsArray {
@@ -23,6 +24,7 @@ class RecentDriverResult {
                 self.position = raceResult.position
                 self.points = raceResult.points
                 self.status = raceResult.status
+                self.roundNumber = race.roundNumber
             }
         }
     }

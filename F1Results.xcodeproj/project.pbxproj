@@ -10,6 +10,8 @@
 		100250FC1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */; };
 		100338531BEEB542008CC50D /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100338521BEEB542008CC50D /* RaceTableViewCell.swift */; };
 		1055A4AD1C209249001C4278 /* RecentDriverResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055A4AC1C209249001C4278 /* RecentDriverResult.swift */; };
+		1055A4AF1C20A6E4001C4278 /* RecentDriverResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055A4AE1C20A6E4001C4278 /* RecentDriverResultTableViewCell.swift */; };
+		1055A4B11C20C706001C4278 /* DriverProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055A4B01C20C706001C4278 /* DriverProfileTableViewCell.swift */; };
 		10614F7C1BF17DCF00AE0759 /* ConstructorStandingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7B1BF17DCF00AE0759 /* ConstructorStandingsController.swift */; };
 		10614F7E1BF17DD900AE0759 /* ConstructorStanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7D1BF17DD900AE0759 /* ConstructorStanding.swift */; };
 		10614F801BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7F1BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift */; };
@@ -36,6 +38,8 @@
 		100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaceResultTableViewCell.swift; path = F1Results/RaceResultTableViewCell.swift; sourceTree = "<group>"; };
 		100338521BEEB542008CC50D /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		1055A4AC1C209249001C4278 /* RecentDriverResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentDriverResult.swift; sourceTree = "<group>"; };
+		1055A4AE1C20A6E4001C4278 /* RecentDriverResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentDriverResultTableViewCell.swift; sourceTree = "<group>"; };
+		1055A4B01C20C706001C4278 /* DriverProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverProfileTableViewCell.swift; sourceTree = "<group>"; };
 		10614F7B1BF17DCF00AE0759 /* ConstructorStandingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStandingsController.swift; sourceTree = "<group>"; };
 		10614F7D1BF17DD900AE0759 /* ConstructorStanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStanding.swift; sourceTree = "<group>"; };
 		10614F7F1BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStandingsTableTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
+				1055A4B01C20C706001C4278 /* DriverProfileTableViewCell.swift */,
+				1055A4AE1C20A6E4001C4278 /* RecentDriverResultTableViewCell.swift */,
 			);
 			name = "Driver Profile View";
 			path = F1Results;
@@ -271,8 +277,10 @@
 				10B74E931BED3152009F6F52 /* NetworkController.swift in Sources */,
 				10B74E8C1BED3112009F6F52 /* RaceResult.swift in Sources */,
 				10A9AC201BF013CF00FEA061 /* DriverStanding.swift in Sources */,
+				1055A4AF1C20A6E4001C4278 /* RecentDriverResultTableViewCell.swift in Sources */,
 				10614F7C1BF17DCF00AE0759 /* ConstructorStandingsController.swift in Sources */,
 				10A9AC1B1BF00F8800FEA061 /* DriverStandingsTableViewController.swift in Sources */,
+				1055A4B11C20C706001C4278 /* DriverProfileTableViewCell.swift in Sources */,
 				1055A4AD1C209249001C4278 /* RecentDriverResult.swift in Sources */,
 				10A9AC1D1BF011B500FEA061 /* DriverStandingsTableViewCell.swift in Sources */,
 				10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */,

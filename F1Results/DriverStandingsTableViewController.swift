@@ -117,7 +117,6 @@ class DriverStandingsTableViewController: UITableViewController {
                 
                 driverProfileScene.driverStanding = driverStanding
                 driverProfileScene.viewMode = .driverStanding
-                driverProfileScene.updateWithDriverStanding(driverStanding)
                 driverProfileScene.driverCode = driverStanding.driverCode
                 driverProfileScene.updateWithRecentResults()
             }

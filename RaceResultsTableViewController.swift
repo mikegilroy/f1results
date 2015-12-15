@@ -102,8 +102,6 @@ class RaceResultsTableViewController: UITableViewController {
                 driverProfileScene.raceResult = raceResult
                 driverProfileScene.race = self.race
                 driverProfileScene.viewMode = .raceResult
-                
-                driverProfileScene.updateWithRaceResult(raceResult)
                 driverProfileScene.driverCode = raceResult.driverCode
                 driverProfileScene.updateWithRecentResults()
             }
