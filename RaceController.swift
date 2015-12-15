@@ -11,6 +11,8 @@ import UIKit
 
 class RaceController {
     
+    static let sharedInstance = RaceController()
+    
     
     var races: [Race] = []
     
@@ -45,7 +47,7 @@ class RaceController {
                                     // append race to racesArray
                                     racesArray.append(raceObject)
                                 }
-                                
+                                RaceController.sharedInstance.races = racesArray
                                 completion(racesArray: racesArray)
                                 
                             } else {

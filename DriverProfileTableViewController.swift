@@ -32,29 +32,11 @@ class DriverProfileTableViewController: UIViewController {
     @IBOutlet weak var statusWinsTitleLabel: UILabel!
     
     
-    
-//    @IBOutlet weak var driverNameLabel: UILabel!
-//    @IBOutlet weak var flagImageView: UIImageView!
-//    @IBOutlet weak var driverPhotoImageView: UIImageView!
-//    @IBOutlet weak var carNumberLabel: UILabel!
-//
-//    @IBOutlet weak var teamLabel: UILabel!
-//    @IBOutlet weak var finishPositionLabel: UILabel!
-//    @IBOutlet weak var pointsLabel: UILabel!
-//    @IBOutlet weak var statusLabel: UILabel!
-//    @IBOutlet weak var timeLabel: UILabel!
-//    @IBOutlet weak var gridPositionLabel: UILabel!
-//    @IBOutlet weak var finalPositionLabel: UILabel!
-//    @IBOutlet weak var fastestLapTimeLabel: UILabel!
-//    
-//    @IBOutlet weak var pointsTitleLabel: UILabel!
-//    @IBOutlet weak var statusWinsTitleLabel: UILabel!
-    
-    
     var raceResult: RaceResult?
     var race: Race?
-    
+    var recentResults: [RecentDriverResult] = []
     var driverStanding: DriverStanding?
+    var driverCode: String = ""
     
     var viewMode: ViewMode = .driverStanding
     
@@ -139,6 +121,16 @@ class DriverProfileTableViewController: UIViewController {
         self.pointsLabel.text = "\(standing.points) pts"
         self.statusLabel.text = "\(standing.wins)"
         
+    }
+    
+    
+    func updateWithRecentResults() {
+        self.recentResults = []
+        for race in RaceController.sharedInstance.races {
+            let recentResult = RecentDriverResult(race: race, driverCode: driverCode)
+            self.recentResults.append(recentResult)
+        }
+        self.tableView.reloadData()
     }
     
     
@@ -232,6 +224,7 @@ class DriverProfileTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateWithRecentResults()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -254,11 +247,15 @@ extension DriverProfileTableViewController: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 5
+        return recentResults.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("recentDriverResultCell", forIndexPath: indexPath)
+        let recentResult = self.recentResults[indexPath.row]
+        cell.textLabel?.text = recentResult.race
+        cell.detailTextLabel?.text = "\(recentResult.position)"
+        
         return cell
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		100250FC1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */; };
 		100338531BEEB542008CC50D /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100338521BEEB542008CC50D /* RaceTableViewCell.swift */; };
+		1055A4AD1C209249001C4278 /* RecentDriverResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055A4AC1C209249001C4278 /* RecentDriverResult.swift */; };
 		10614F7C1BF17DCF00AE0759 /* ConstructorStandingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7B1BF17DCF00AE0759 /* ConstructorStandingsController.swift */; };
 		10614F7E1BF17DD900AE0759 /* ConstructorStanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7D1BF17DD900AE0759 /* ConstructorStanding.swift */; };
 		10614F801BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10614F7F1BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		100250FB1BEFEE7A006FF3C8 /* RaceResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RaceResultTableViewCell.swift; path = F1Results/RaceResultTableViewCell.swift; sourceTree = "<group>"; };
 		100338521BEEB542008CC50D /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
+		1055A4AC1C209249001C4278 /* RecentDriverResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentDriverResult.swift; sourceTree = "<group>"; };
 		10614F7B1BF17DCF00AE0759 /* ConstructorStandingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStandingsController.swift; sourceTree = "<group>"; };
 		10614F7D1BF17DD900AE0759 /* ConstructorStanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStanding.swift; sourceTree = "<group>"; };
 		10614F7F1BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorStandingsTableTableViewController.swift; sourceTree = "<group>"; };
@@ -87,13 +89,22 @@
 			name = "Race Results View";
 			sourceTree = "<group>";
 		};
-		10614F811BF1849700AE0759 /* Constructor Standinds View */ = {
+		1055A4AB1C208EFB001C4278 /* Driver Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
+			);
+			name = "Driver Profile View";
+			path = F1Results;
+			sourceTree = "<group>";
+		};
+		10614F811BF1849700AE0759 /* Constructor Standings View */ = {
 			isa = PBXGroup;
 			children = (
 				10614F7F1BF1849300AE0759 /* ConstructorStandingsTableTableViewController.swift */,
 				10614F821BF186AE00AE0759 /* ConstructorStandingTableViewCell.swift */,
 			);
-			name = "Constructor Standinds View";
+			name = "Constructor Standings View";
 			sourceTree = "<group>";
 		};
 		10A9AC1E1BF011BA00FEA061 /* Driver Standings View */ = {
@@ -128,7 +139,6 @@
 				10B74E701BED2F9E009F6F52 /* AppDelegate.swift */,
 				10B74E741BED2F9E009F6F52 /* Main.storyboard */,
 				10B74E861BED3064009F6F52 /* Views */,
-				10B74E981BED8181009F6F52 /* DriverProfileTableViewController.swift */,
 				10B74E911BED313D009F6F52 /* Controllers */,
 				10B74E8A1BED30EB009F6F52 /* Model */,
 				10B74E771BED2F9E009F6F52 /* Assets.xcassets */,
@@ -139,10 +149,11 @@
 		10B74E861BED3064009F6F52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10614F811BF1849700AE0759 /* Constructor Standinds View */,
 				100338541BEEB548008CC50D /* Race Results View */,
 				100250FD1BEFEE89006FF3C8 /* Driver Results View */,
 				10A9AC1E1BF011BA00FEA061 /* Driver Standings View */,
+				1055A4AB1C208EFB001C4278 /* Driver Profile View */,
+				10614F811BF1849700AE0759 /* Constructor Standings View */,
 			);
 			name = Views;
 			path = ..;
@@ -163,6 +174,7 @@
 			children = (
 				10B74E881BED30E7009F6F52 /* Race.swift */,
 				10B74E8B1BED3112009F6F52 /* RaceResult.swift */,
+				1055A4AC1C209249001C4278 /* RecentDriverResult.swift */,
 				10A9AC1F1BF013CF00FEA061 /* DriverStanding.swift */,
 				10614F7D1BF17DD900AE0759 /* ConstructorStanding.swift */,
 			);
@@ -261,6 +273,7 @@
 				10A9AC201BF013CF00FEA061 /* DriverStanding.swift in Sources */,
 				10614F7C1BF17DCF00AE0759 /* ConstructorStandingsController.swift in Sources */,
 				10A9AC1B1BF00F8800FEA061 /* DriverStandingsTableViewController.swift in Sources */,
+				1055A4AD1C209249001C4278 /* RecentDriverResult.swift in Sources */,
 				10A9AC1D1BF011B500FEA061 /* DriverStandingsTableViewCell.swift in Sources */,
 				10B74E971BED6F64009F6F52 /* DriverResultController.swift in Sources */,
 				10614F7E1BF17DD900AE0759 /* ConstructorStanding.swift in Sources */,
