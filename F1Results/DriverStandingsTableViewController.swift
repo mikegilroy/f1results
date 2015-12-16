@@ -10,12 +10,19 @@ import UIKit
 
 class DriverStandingsTableViewController: UITableViewController {
 
+    // MARK: Properties
+    
     var driverStandingsArray : [DriverStanding] = DriverStandingsController.sharedInstance.driverStandingsArray
+    
+    // MARK: Outlets
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     
     // MARK: viewDid Functions
     
     override func viewWillAppear(animated: Bool) {
+        startActivityIndicator()
         loadDriverStandings()
     }
     
@@ -41,6 +48,7 @@ class DriverStandingsTableViewController: UITableViewController {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
+                    self.activityIndicator.hidden = true
                     print(driverStandingsArray)
                 })
                 
@@ -50,7 +58,13 @@ class DriverStandingsTableViewController: UITableViewController {
         }
     }
     
-
+    func startActivityIndicator() {
+        let frame = activityIndicator.frame
+        self.activityIndicator.frame = (CGRect(x: ((self.view.frame.width / 2) - 18), y:5, width: frame.width, height: frame.height))
+        self.view.addSubview(self.activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,6 +101,7 @@ class DriverStandingsTableViewController: UITableViewController {
                 
                 _ = driverProfileScene.view
                 
+                driverProfileScene.title = driverStanding.fullName
                 driverProfileScene.driverStanding = driverStanding
                 driverProfileScene.viewMode = .driverStanding
                 driverProfileScene.driverCode = driverStanding.driverCode

@@ -118,8 +118,17 @@
                             <action selector="userRefreshedTable:" destination="aCU-0H-Nxf" eventType="valueChanged" id="9Ht-oN-CN7"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="activityIndicator" destination="pmX-ub-zU4" id="Lqm-J4-NiL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOz-1i-L65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="pmX-ub-zU4">
+                    <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="1665" y="270"/>
         </scene>
@@ -860,8 +869,17 @@
                             <action selector="userRefreshedResults:" destination="XDz-0p-kiV" eventType="valueChanged" id="dFj-Qn-4HM"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="activityIndicator" destination="wnR-Id-QxP" id="uVN-f8-MWN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZr-S1-mrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="wnR-Id-QxP">
+                    <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="1639" y="1086"/>
         </scene>
@@ -989,10 +1007,19 @@
                             <action selector="userRefreshedTable:" destination="G10-WG-agS" eventType="valueChanged" id="KEX-i4-cTE"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Arw-tI-zWk" id="U6s-ba-Wcz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRN-eQ-KnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="Arw-tI-zWk">
+                    <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
             </objects>
-            <point key="canvasLocation" x="1639" y="1749"/>
+            <point key="canvasLocation" x="1639" y="1786"/>
         </scene>
         <!--Drivers-->
         <scene sceneID="wjo-fn-R9Y">
@@ -1142,6 +1169,6 @@
         <image name="flagIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OT4-Rb-KhY"/>
+        <segue reference="v7l-Ts-pmx"/>
     </inferredMetricsTieBreakers>
 </document>

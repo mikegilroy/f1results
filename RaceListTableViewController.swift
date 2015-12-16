@@ -14,6 +14,7 @@ class RaceListTableViewController: UITableViewController {
     
     var races: [Race]?
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     // MARK: Actions
 
@@ -26,6 +27,7 @@ class RaceListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startActivityIndicator()
         loadRaces()
     }
 
@@ -39,6 +41,8 @@ class RaceListTableViewController: UITableViewController {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.hidden = true
                     print(races)
                 })
                 
@@ -46,6 +50,13 @@ class RaceListTableViewController: UITableViewController {
                 print("no races")
             }
         }
+    }
+    
+    func startActivityIndicator() {
+        let frame = activityIndicator.frame
+        self.activityIndicator.frame = (CGRect(x: ((self.view.frame.width / 2) - 18), y:5, width: frame.width, height: frame.height))
+        self.view.addSubview(self.activityIndicator)
+        activityIndicator.startAnimating()
     }
 
     

@@ -52,6 +52,7 @@ class RaceResultsTableViewController: UITableViewController {
                 
                 let raceResult = self.resultsArray[indexPath.row]
                 
+                driverProfileScene.title = raceResult.fullName
                 driverProfileScene.raceResult = raceResult
                 driverProfileScene.race = self.race
                 driverProfileScene.viewMode = .raceResult

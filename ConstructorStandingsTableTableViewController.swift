@@ -10,14 +10,24 @@ import UIKit
 
 class ConstructorStandingsTableTableViewController: UITableViewController {
 
+    // MARK: Properties
     
     var constructorStandingsArray: [ConstructorStanding] = ConstructorStandingsController.sharedInstance.constructorStandingsArray
     
+    // MARK: Outlets
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    
+    // MARK: ViewDid Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startActivityIndicator()
         loadStandings()
     }
 
+    
     // MARK: Actions
     
     @IBAction func userRefreshedTable(sender: AnyObject) {
@@ -36,6 +46,7 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
+                    self.activityIndicator.hidden = true
                     print(constructorStandingsArray)
                 })
             } else {
@@ -44,19 +55,25 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
         }
     }
     
+    func startActivityIndicator() {
+        let frame = activityIndicator.frame
+        self.activityIndicator.frame = (CGRect(x: ((self.view.frame.width / 2) - 18), y:5, width: frame.width, height: frame.height))
+        self.view.addSubview(self.activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    
+    
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.constructorStandingsArray.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("constructorStandingCell", forIndexPath: indexPath) as! ConstructorStandingTableViewCell
 
         let constructorStanding = self.constructorStandingsArray[indexPath.row]
-        
         cell.updateCellWithConstructorStanding(constructorStanding)
         
         return cell
@@ -64,7 +81,6 @@ class ConstructorStandingsTableTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 54
-
     }
     
 }
