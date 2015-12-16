@@ -133,8 +133,14 @@ extension DriverProfileTableViewController: UITableViewDataSource, UITableViewDe
         }
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat(0)
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        header.backgroundView?.backgroundColor = UIColor.redColor()
+        header.textLabel!.textColor = UIColor.whiteColor()
+        header.textLabel!.frame = header.frame
+        header.textLabel!.textAlignment = NSTextAlignment.Center
     }
     
 }
